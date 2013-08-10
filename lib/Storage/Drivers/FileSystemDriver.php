@@ -101,6 +101,27 @@ class FileSystemDriver implements IDriver
     }
 
     /**
+     * @param string $directory
+     * @return bool
+     */
+    public function isDirectory($directory)
+    {
+        $directory = $this->getAbsoluteFilePath($directory);
+
+        return is_dir($directory) && is_writeable($directory);
+    }
+
+    /**
+     * @param string $directory
+     * @param int $rights
+     * @return bool
+     */
+    public function createDirectory($directory, $rights = 0777)
+    {
+        return mkdir($directory, $rights);
+    }
+
+    /**
      * @param resource $handler
      * @param int $type
      * @return bool

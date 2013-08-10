@@ -26,4 +26,17 @@ interface IDriver
      * @return bool
      */
     public function exists($file);
+
+    /**
+     * @param string $directory
+     * @return bool
+     */
+    public function isDirectory($directory);
+
+    /**
+     * @param string $directory
+     * @param int $rights
+     * @return bool
+     */
+    public function createDirectory($directory, $rights = 0766);
 }

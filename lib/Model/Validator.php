@@ -45,7 +45,7 @@ class Validator
     public function validate()
     {
         foreach($this->model->getDefinition()->getAllProperties() as $property) {
-
+            // TODO: validate all properties; do not forget unique values
         }
     }
 }

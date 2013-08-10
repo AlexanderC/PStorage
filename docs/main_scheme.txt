@@ -11,11 +11,14 @@
 
                          |----------------------------------table folder [%table%_stf]
                          |                                               |
+                         |                                            [ pkvf ]
+                         |                                               |
                          |                     0.100_pk, 101.201_pk, %n%.%n+CHN%_pk .... etc [index folders]
                          |    (Each index have an related file as row data, chunks/CHN length defined by user, default 100)
                          |           [ -= Description =-
                          |               each row that is related to pk entry is stored in sub folder, that is selected
-                         |               when table grow up to the value defined by the user (default 100).
+                         |               when table grow up to the value defined by the user (default 100). Row file
+                         |               name is equal to index value
                          |
                          |               The name is generated as %n%.%n+CHN%_rcf where first part has the same values
                          |                  as for generating pk files.
@@ -29,9 +32,9 @@
                                                |
                                                |
                                                |
-                           %row%_ridx (reversed index every field)
+                           %field%_ridx (reversed index every field)
                            [ -= Description =-
-                                %row% value MD5 hash as rev index file name.
+                                %field% value MD5 hash as rev index file name.
 
                                 There can be collisions, that's why an rev index file
                                 will have multiple primary keys as value, if the is multi than each
