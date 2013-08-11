@@ -156,21 +156,33 @@ class Table
     }
 
     /**
+     * @throws \RuntimeException
      * @return void
      */
     public function assureStructure()
     {
+        $result = true;
+
         // check only main table folder due of overhead
         if(!$this->storage->isDirectory($this->getMainFolder())) {
-            $this->storage->createDirectory($this->getMainFolder());
-            $this->storage->createDirectory($this->primaryKey->getMainFolder());
+            $result &= $this->storage->createDirectory($this->getMainFolder());
+            $result &= $this->storage->createDirectory($this->primaryKey->getMainFolder());
 
+            $i = 0;
             foreach($this->reversedIndexes as $reversedIndex) {
-                $this->storage->createDirectory($reversedIndex->getMainFolder());
-                $this->storage->createDirectory($reversedIndex->getPropertyFolder());
+                if(0 === $i) {
+                    $result &= $this->storage->createDirectory($reversedIndex->getMainFolder());
+                    $i++;
+                }
+
+                $result &= $this->storage->createDirectory($reversedIndex->getPropertyFolder());
             }
 
-            $this->storage->write($this->primaryKey->getIncrementalFile(), 0);
+            $result &= $this->storage->write($this->primaryKey->getIncrementalFile(), 1);
+        }
+
+        if(!$result) {
+            throw new \RuntimeException("Unable to create {$this->getName()} table structure");
         }
     }
 }

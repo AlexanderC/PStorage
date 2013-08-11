@@ -9,7 +9,8 @@ namespace PStorage\Storage;
 class ReversedIndex extends ATableSubItem
 {
     const MAIN_FOLDER = "ridxf";
-    const REVERSED_INDEX_FOLDER_TPL = "%s_ridx";
+    const REVERSED_INDEX_FILE_TPL = "%s_ridx";
+    const REVERSED_INDEX_FOLDER_TPL = "%s_ridxf";
 
     const REL_ONE = 0x001;
     const REL_MANY = 0x002;
@@ -75,5 +76,40 @@ class ReversedIndex extends ATableSubItem
     public function getPropertyFolder()
     {
         return sprintf("%s/%s", $this->getMainFolder(), sprintf(self::REVERSED_INDEX_FOLDER_TPL, $this->property));
+    }
+
+    /**
+     * @param mixed $propertyValue
+     * @return string
+     */
+    public function getReversedIndexFile($propertyValue)
+    {
+        return sprintf(
+            "%s/%s",
+            $this->getReversedIndexSubfolder($propertyValue),
+            sprintf(self::REVERSED_INDEX_FILE_TPL, $this->getReversedIndexBasename($propertyValue))
+        );
+    }
+
+    /**
+     * @param mixed $propertyValue
+     * @return string
+     */
+    public function getReversedIndexSubfolder($propertyValue)
+    {
+        return sprintf(
+            "%s/%s",
+            $this->getPropertyFolder(),
+            substr($this->getReversedIndexBasename($propertyValue), 0, 16)
+        );
+    }
+
+    /**
+     * @param mixed $propertyValue
+     * @return string
+     */
+    protected function getReversedIndexBasename($propertyValue)
+    {
+        return md5(serialize($propertyValue));
     }
 }

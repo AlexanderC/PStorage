@@ -12,9 +12,10 @@ use PStorage\Storage\Exceptions\PrimaryKeyIncrementalFileViolation;
 class PrimaryKey extends ATableSubItem
 {
     const MAIN_FOLDER = "pkvf";
-    const PRIMARY_KEY_FILE_TPL = "%s_pk";
+    const PRIMARY_KEY_FILE_TPL = "%d.%d_pk";
     const DEFAULT_CHUNK_SIZE = 100;
     const INCREMENTAL_FILE = 'incpkv';
+    const ROW_CONTENT_FOLDER_TPL = "%d.%d_rcf";
 
     /**
      * @var int
@@ -65,6 +66,20 @@ class PrimaryKey extends ATableSubItem
         $rangeEnd = $rangeStart + $this->chunkSize;
 
         return sprintf("%s/%s", $this->getMainFolder(), sprintf(self::PRIMARY_KEY_FILE_TPL, $rangeStart, $rangeEnd));
+    }
+
+    /**
+     * @param int $index
+     * @return string
+     */
+    public function getRowContentFolder($index)
+    {
+        $min = floor($index / ($this->chunkSize + 1));
+
+        $rangeStart = ($this->chunkSize + 1) * $min;
+        $rangeEnd = $rangeStart + $this->chunkSize;
+
+        return sprintf("%s/%s", $this->getMainFolder(), sprintf(self::ROW_CONTENT_FOLDER_TPL, $rangeStart, $rangeEnd));
     }
 
     /**

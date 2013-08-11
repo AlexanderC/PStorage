@@ -102,7 +102,7 @@ class FileSystemDriver implements IDriver
         $result = is_file($file) && is_writeable($file) && is_readable($file);
 
         // collect garbages...
-        if($result && filesize($result) === 0) {
+        if($result && @filesize($result) === 0) {
             @unlink($file);
             $result = false;
         }
@@ -130,7 +130,7 @@ class FileSystemDriver implements IDriver
     {
         $directory = $this->getAbsoluteFilePath($directory);
 
-        return mkdir($directory, $rights);
+        return @mkdir($directory, $rights);
     }
 
     /**

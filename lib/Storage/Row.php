@@ -8,15 +8,24 @@ namespace PStorage\Storage;
 
 class Row extends ATableSubItem
 {
-    const MAIN_FOLDER = "pkvf";
-    const ROW_CONTENT_FOLDER_TPL = "%s_rcf";
     const ROW_CONTENT_FILE_TPL = "%s_rc";
 
     /**
-     * @return string
+     * @return string|void
+     * @throws \BadMethodCallException
      */
     public function getMainFolder()
     {
-        return sprintf("%s/%s", $this->table->getMainFolder(), self::MAIN_FOLDER);
+        throw new \BadMethodCallException("Main folder name should be retrieved via PrimaryKey object");
+    }
+
+    /**
+     * @param string $rowContentFolder
+     * @param string $tmpName
+     * @return string
+     */
+    public function getRowContentFile($rowContentFolder, $tmpName)
+    {
+        return sprintf("%s/%s", $rowContentFolder, sprintf(self::ROW_CONTENT_FILE_TPL, $tmpName));
     }
 }

@@ -16,9 +16,11 @@
                          |              1.101_pk, 102.202_pk, 203.303_pk, %n%.%n+CHN%_pk .... etc [index folders]
                          |    (Each index have an related file as row data, chunks/CHN length defined by user, default 100)
                          |           [ -= Description =-
+                         |               In fact PK files contains serialized array with index as key and row file as value
+                         |
                          |               each row that is related to pk entry is stored in sub folder, that is selected
                          |               when table grow up to the value defined by the user (default 100). Row file
-                         |               name is equal to index value + static part, as %idx%_rc
+                         |               name is equal to index value + static part, as |randstr|_rc, where |randstr| is random
                          |
                          |               The name is generated as %n%.%n+CHN%_rcf where first part has the same values
                          |                  as for generating pk files.
@@ -34,9 +36,9 @@
                                                |
                                                |
                                                |
-                           %field%_ridx (reversed index every field)
+                           %field%_ridxf (reversed index every field)
                            [ -= Description =-
-                                %field% value MD5 hash as rev index file name.
+                                Serialized %field% value MD5 hash as rev index file name.
 
                                 There can be collisions, that's why an rev index file
                                 will have multiple primary keys as value, if the is multi than each

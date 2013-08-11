@@ -48,6 +48,4 @@ $post->setTags([
     'tag1', 'tag2', 'testtag'
 ]);
 
-$post->save();
-
-var_dump($post->getSlug());
+var_dump($post->save());
