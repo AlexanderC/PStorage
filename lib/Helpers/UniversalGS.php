@@ -84,7 +84,7 @@ class UniversalGS
         $this->filterInputProperties($validate);
 
         if(count($validate) !== 1) {
-            throw new \InvalidArgumentException("Property {$name} is not allowed");
+            throw new \InvalidArgumentException("Property {$name} is both not allowed or invalid");
         }
 
         $this->properties[$name] = $value;
@@ -95,13 +95,26 @@ class UniversalGS
      * @param array $values
      * @return mixed
      * @throws \OutOfBoundsException
+     * @throws \BadMethodCallException
      */
     public function __call($method, array $values)
     {
         if(preg_match("/^(get|set)(.+)$/ui", $method, $matches) && count($matches) === 3) {
             $name = lcfirst($matches[2]);
+            $isSetter = stripos($matches[1], 'set') === 0;
 
-            return $this->$name;
+            if($isSetter) {
+                if(($countValues = count($values)) !== 1) {
+                    throw new \BadMethodCallException(
+                        "Setter must be called with one parameter as property value ({$countValues} given)"
+                    );
+                }
+
+                $this->$name = $values[0];
+                return;
+            } else {
+                return $this->$name;
+            }
         }
 
         throw new \OutOfBoundsException("Method {$method} does not exists");

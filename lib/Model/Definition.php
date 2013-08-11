@@ -110,6 +110,14 @@ class Definition implements MainDefinition
     }
 
     /**
+     * @return mixed
+     */
+    public function getUniqueProperties()
+    {
+        return $this->fields[self::UNIQUE];
+    }
+
+    /**
      * @return int|string
      */
     public function getPrimaryKeyProperty()

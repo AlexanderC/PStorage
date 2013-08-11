@@ -9,7 +9,8 @@ namespace PStorage\Storage;
 class Row extends ATableSubItem
 {
     const MAIN_FOLDER = "pkvf";
-    const ROW_CONTENT_FILE_TPL = "%s_rcf";
+    const ROW_CONTENT_FOLDER_TPL = "%s_rcf";
+    const ROW_CONTENT_FILE_TPL = "%s_rc";
 
     /**
      * @return string

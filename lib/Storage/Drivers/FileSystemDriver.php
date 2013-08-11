@@ -47,7 +47,12 @@ class FileSystemDriver implements IDriver
         $result = false;
         $file = $this->getAbsoluteFilePath($file);
 
-        $handler = fopen($file, 'wb');
+        $handler = fopen($file, 'w');
+
+        if(!$handler) {
+            throw new \RuntimeException("Unable to open {$file} file for writing");
+        }
+
         while(!$this->lock($handler, self::WRITE_LOCK));
 
         if(fwrite($handler, $string) === strlen($string)) {
@@ -71,6 +76,11 @@ class FileSystemDriver implements IDriver
         $file = $this->getAbsoluteFilePath($file);
 
         $handler = fopen($file, 'rb');
+
+        if(!$handler) {
+            throw new \RuntimeException("Unable to open {$file} file for reading");
+        }
+
         while(!$this->lock($handler, self::READ_LOCK));
 
         $string = fread($handler, filesize($file));
@@ -118,6 +128,8 @@ class FileSystemDriver implements IDriver
      */
     public function createDirectory($directory, $rights = 0777)
     {
+        $directory = $this->getAbsoluteFilePath($directory);
+
         return mkdir($directory, $rights);
     }
 
@@ -151,6 +163,6 @@ class FileSystemDriver implements IDriver
      */
     protected function getAbsoluteFilePath($file)
     {
-        return realpath(sprintf("%s/%s", $this->root, ltrim(str_replace("\\", "/", $file), "/")));
+        return sprintf("%s/%s", $this->root, ltrim(str_replace("\\", "/", $file), "/"));
     }
 }

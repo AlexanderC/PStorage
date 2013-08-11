@@ -6,11 +6,15 @@
 namespace PStorage\Storage;
 
 
+use PStorage\Storage\Exceptions\AtomarityViolationException;
+use PStorage\Storage\Exceptions\PrimaryKeyIncrementalFileViolation;
+
 class PrimaryKey extends ATableSubItem
 {
     const MAIN_FOLDER = "pkvf";
     const PRIMARY_KEY_FILE_TPL = "%s_pk";
     const DEFAULT_CHUNK_SIZE = 100;
+    const INCREMENTAL_FILE = 'incpkv';
 
     /**
      * @var int
@@ -39,5 +43,53 @@ class PrimaryKey extends ATableSubItem
     public function getMainFolder()
     {
         return sprintf("%s/%s", $this->table->getMainFolder(), self::MAIN_FOLDER);
+    }
+
+    /**
+     * @return string
+     */
+    public function getIncrementalFile()
+    {
+        return sprintf("%s/%s", $this->getMainFolder(), self::INCREMENTAL_FILE);
+    }
+
+    /**
+     * @param int $index
+     * @return string
+     */
+    public function getIndexFile($index)
+    {
+        $min = floor($index / ($this->chunkSize + 1));
+
+        $rangeStart = ($this->chunkSize + 1) * $min;
+        $rangeEnd = $rangeStart + $this->chunkSize;
+
+        return sprintf("%s/%s", $this->getMainFolder(), sprintf(self::PRIMARY_KEY_FILE_TPL, $rangeStart, $rangeEnd));
+    }
+
+    /**
+     * Note: i do not know why increment is on this level, but it's
+     *          a good occasion to increment it coz do not know whether
+     *          it is used or not for storing a new row
+     *
+     * @return int
+     * @throws Exceptions\PrimaryKeyIncrementalFileViolation
+     * @throws Exceptions\AtomarityViolationException
+     */
+    public function getIncrementalValue()
+    {
+        $storage = $this->table->getStorage();
+
+        $index = (int) $storage->read($this->getIncrementalFile());
+
+        if($index <= 0) {
+            throw new PrimaryKeyIncrementalFileViolation("Incremental file broken, please fix it manually");
+        }
+
+        if(!$storage->write($this->getIncrementalFile(), $index + 1)) {
+            throw new AtomarityViolationException("Unable to persist new index into incremental file");
+        }
+
+        return $index;
     }
 }

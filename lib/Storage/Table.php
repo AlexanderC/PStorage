@@ -7,10 +7,14 @@ namespace PStorage\Storage;
 
 
 use PStorage\AModel;
+use PStorage\Model\TableTrait;
 use PStorage\Storage\Drivers\IDriver;
+use PStorage\Storage\Serialization\Driver\IDriver as SerializationIDriver;
 
 class Table
 {
+    use TableTrait;
+
     const MAIN_FOLDER_TPL = "%s_stf";
 
     /**
@@ -22,6 +26,11 @@ class Table
      * @var \PStorage\AModel
      */
     protected $model;
+
+    /**
+     * @var Serialization\Driver\IDriver
+     */
+    protected $serializer;
 
     /**
      * @var PrimaryKey
@@ -41,11 +50,13 @@ class Table
     /**
      * @param AModel $model
      * @param IDriver $storage
+     * @param SerializationIDriver $serializer
      */
-    public function __construct(AModel $model, IDriver $storage)
+    public function __construct(AModel $model, IDriver $storage, SerializationIDriver $serializer)
     {
         $this->model = $model;
         $this->storage = $storage;
+        $this->serializer = $serializer;
 
         $this->primaryKey = new PrimaryKey($this);
         $this->row = new Row($this);
@@ -86,6 +97,30 @@ class Table
     public function getModel()
     {
         return $this->model;
+    }
+
+    /**
+     * @param IDriver $serializer
+     */
+    public function setSerializer(IDriver $serializer)
+    {
+        $this->serializer = $serializer;
+    }
+
+    /**
+     * @param SerializationIDriver $storage
+     */
+    public function setStorage(SerializationIDriver $storage)
+    {
+        $this->storage = $storage;
+    }
+
+    /**
+     * @return \PStorage\Storage\Serialization\Driver\IDriver
+     */
+    public function getSerializer()
+    {
+        return $this->serializer;
     }
 
     /**
@@ -134,6 +169,8 @@ class Table
                 $this->storage->createDirectory($reversedIndex->getMainFolder());
                 $this->storage->createDirectory($reversedIndex->getPropertyFolder());
             }
+
+            $this->storage->write($this->primaryKey->getIncrementalFile(), 0);
         }
     }
 }

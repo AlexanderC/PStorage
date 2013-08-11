@@ -6,6 +6,9 @@
 require __DIR__ . '/../autoloader.php';
 
 use PStorage\AModel;
+use PStorage\Storage\DefaultClient;
+use PStorage\Storage\Drivers\FileSystemDriver;
+use PStorage\Storage\Client;
 
 class Post extends AModel
 {
@@ -22,8 +25,29 @@ class Post extends AModel
             'slug' => self::ONE | self::REQUIRED | self::UNIQUE
         ];
     }
+
+    /**
+     * @return array
+     */
+    protected function behaviors()
+    {
+        return [
+            'slugable' => [
+                'property' => 'title'
+            ]
+        ];
+    }
 }
 
-$post = new Post();
+DefaultClient::getInstance(new Client(new FileSystemDriver(__DIR__ . "/db")));
 
-var_dump($post->getTitle());
+$post = new Post();
+$post->setTitle('new title');
+$post->setText('Lorem ipsum dolor sit amet...');
+$post->setTags([
+    'tag1', 'tag2', 'testtag'
+]);
+
+$post->save();
+
+var_dump($post->getSlug());

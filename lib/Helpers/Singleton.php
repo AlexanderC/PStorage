@@ -17,7 +17,7 @@ trait Singleton
 
         if(!($self instanceof self)) {
             $self = new self;
-            call_user_func_array([$self, '__onAfterConstruct'], func_num_args());
+            call_user_func_array([$self, '__onAfterConstruct'], func_get_args());
         }
 
         return $self;

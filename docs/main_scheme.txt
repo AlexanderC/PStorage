@@ -13,15 +13,17 @@
                          |                                               |
                          |                                            [ pkvf ]
                          |                                               |
-                         |                     0.100_pk, 101.201_pk, %n%.%n+CHN%_pk .... etc [index folders]
+                         |              1.101_pk, 102.202_pk, 203.303_pk, %n%.%n+CHN%_pk .... etc [index folders]
                          |    (Each index have an related file as row data, chunks/CHN length defined by user, default 100)
                          |           [ -= Description =-
                          |               each row that is related to pk entry is stored in sub folder, that is selected
                          |               when table grow up to the value defined by the user (default 100). Row file
-                         |               name is equal to index value
+                         |               name is equal to index value + static part, as %idx%_rc
                          |
                          |               The name is generated as %n%.%n+CHN%_rcf where first part has the same values
                          |                  as for generating pk files.
+                         |
+                         |               Note that incremental value of primary key is stored in incpkv file
                          |           ]
                          |
                          |
