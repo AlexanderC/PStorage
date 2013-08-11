@@ -39,4 +39,10 @@ interface IDriver
      * @return bool
      */
     public function createDirectory($directory, $rights = 0766);
+
+    /**
+     * @param string $pattern
+     * @return array
+     */
+    public function & glob($pattern);
 }

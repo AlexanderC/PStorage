@@ -158,6 +158,22 @@ class FileSystemDriver implements IDriver
     }
 
     /**
+     * @param string $pattern
+     * @return array
+     */
+    public function & glob($pattern)
+    {
+        $pattern = $this->getAbsoluteFilePath($pattern);
+        $results = glob($pattern);
+
+        foreach($results as & $file) {
+            $file = preg_replace("/^" . preg_quote($this->root, "/") . "\//ui", "", $file);
+        }
+
+        return $results;
+    }
+
+    /**
      * @param string $file
      * @return string
      */

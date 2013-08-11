@@ -171,15 +171,15 @@ abstract class AModel extends UniversalGS implements Definition
      * @param int $fetchMode
      * @return Collection
      */
-    public static function createCollectionFromArray(array & $data, $fetchMode = Collection::FETCH_LAZY)
+    public function createCollectionFromArray(array & $data, $fetchMode = Collection::FETCH_LAZY)
     {
         $collectionData = [];
-        $modelClass = get_class();
+        $modelClass = get_class($this);
 
         foreach($data as & $modelData) {
             $collectionData[] = [
                 'model' => $modelClass,
-                'date' => $modelData
+                'data' => $modelData
             ];
         }
 

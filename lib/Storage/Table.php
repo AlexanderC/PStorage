@@ -15,6 +15,9 @@ class Table
 {
     use TableTrait;
 
+    const ORDER_ASC = 0x001;
+    const ORDER_DESC = 0x002;
+
     const MAIN_FOLDER_TPL = "%s_stf";
 
     /**
@@ -48,6 +51,11 @@ class Table
     protected $row;
 
     /**
+     * @var int
+     */
+    protected $order = self::ORDER_ASC;
+
+    /**
      * @param AModel $model
      * @param IDriver $storage
      * @param SerializationIDriver $serializer
@@ -73,6 +81,27 @@ class Table
 
 
         $this->assureStructure();
+    }
+
+    /**
+     * @param int $order
+     * @throws \BadMethodCallException
+     */
+    public function setResultOrder($order)
+    {
+        if(!in_array($order, [self::ORDER_ASC, self::ORDER_DESC])) {
+            throw new \BadMethodCallException("Result order can be both ORDER_ASC or ORDER_DESC");
+        }
+
+        $this->order = $order;
+    }
+
+    /**
+     * @return int
+     */
+    public function getResultOrder()
+    {
+        return $this->order;
     }
 
     /**

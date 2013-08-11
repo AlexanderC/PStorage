@@ -69,6 +69,14 @@ class PrimaryKey extends ATableSubItem
     }
 
     /**
+     * @return string
+     */
+    public function getIndexFilesGlobPattern()
+    {
+        return sprintf("%s/%s", $this->getMainFolder(), str_replace("%d", "*", self::PRIMARY_KEY_FILE_TPL));
+    }
+
+    /**
      * @param int $index
      * @return string
      */
