@@ -43,11 +43,6 @@ abstract class AModel extends UniversalGS implements Definition
      */
     public function __construct()
     {
-        // pre fill model properties
-        if(func_num_args() > 0) {
-            parent::__construct(func_get_arg(0));
-        }
-
         $this->definition = new ModelDefinition($this->definition());
 
         /** @var Client $client */
@@ -59,6 +54,11 @@ abstract class AModel extends UniversalGS implements Definition
             "PStorage\\Model\\Behaviors\\Helpers\\BehaviorApplyable",
             class_uses(get_class())
         );
+
+        // pre fill model properties
+        if(func_num_args() > 0) {
+            parent::__construct(func_get_arg(0));
+        }
 
         if(true === $this->usesBehaviorApplyableTrait) {
             $this->importBehaviors();

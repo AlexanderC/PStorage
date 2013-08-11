@@ -7,11 +7,11 @@
     <file path="/main_scheme.txt" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222076282" ignored="false" />
     <file path="/autoloader.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376127796988" ignored="false" />
     <file path="/AModel.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376218125775" ignored="false" />
-    <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209717776" ignored="false" />
+    <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213381081" ignored="false" />
-    <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376216222187" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376224616913" ignored="false" />
+    <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225648517" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
     <file path="/Table.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376219656585" ignored="false" />
@@ -32,14 +32,15 @@
     <file path="/Row.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222605308" ignored="false" />
     <file path="/Inflector.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376176965950" ignored="false" />
     <file path="/PrimaryKeyIncrementalFileViolation.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376179110298" ignored="false" />
-    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222541362" ignored="false" />
+    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225871258" ignored="false" />
     <file path="/DefaultClient.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376205161894" ignored="false" />
     <file path="/BehaviorApplyable.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213015872" ignored="false" />
     <file path="/ABehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376212750122" ignored="false" />
-    <file path="/SlugableBehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213594506" ignored="false" />
+    <file path="/SlugableBehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376226237280" ignored="false" />
     <file path="/Collection.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376215058160" ignored="false" />
     <file path="/CollectionInterface.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376214207603" ignored="false" />
     <file path="/MissingPrimaryKeyException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376218176641" ignored="false" />
+    <file path="/Operations.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376224688938" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
       <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="24" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-11.625">
+            <state line="48" column="3" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-11.958333">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
                 <element signature="e#78#98#0" expanded="true" />
@@ -84,24 +85,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Operations.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
+      <file leaf-file-name="TableTrait.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="5" selection-start="4595" selection-end="4595" vertical-scroll-proportion="-108.125">
+            <state line="64" column="85" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.38265306">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
+                <element signature="e#64#88#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableTrait.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+      <file leaf-file-name="Validator.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Model/Validator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="13" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.48214287">
+            <state line="67" column="60" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-8.208333">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
-                <element signature="e#64#88#0" expanded="true" />
+                <element signature="e#65#85#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,22 +119,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Model/Behaviors/SlugableBehavior.php" />
-        <option value="$PROJECT_DIR$/lib/Helpers/CollectionInterface.php" />
         <option value="$PROJECT_DIR$/lib/Collection.php" />
-        <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
-        <option value="$PROJECT_DIR$/lib/AModel.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Exceptions/MissingPrimaryKeyException.php" />
         <option value="$PROJECT_DIR$/lib/Storage/PrimaryKey.php" />
-        <option value="$PROJECT_DIR$/lib/Model/Validator.php" />
-        <option value="$PROJECT_DIR$/tests/Post.php" />
         <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
         <option value="$PROJECT_DIR$/lib/Storage/ReversedIndex.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_pk" />
         <option value="$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Row.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
+        <option value="$PROJECT_DIR$/lib/AModel.php" />
+        <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Validator.php" />
+        <option value="$PROJECT_DIR$/lib/Helpers/UniversalGS.php" />
         <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Behaviors/SlugableBehavior.php" />
       </list>
     </option>
   </component>
@@ -197,88 +199,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post_stf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ridxf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post_stf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkvf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post_stf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkvf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="0.100_rcf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -690,61 +610,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="5" selection-start="4595" selection-end="4595" vertical-scroll-proportion="-108.125">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="19" selection-start="4434" selection-end="4434" vertical-scroll-proportion="0.5408163">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#58#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/Exceptions/MissingPrimaryKeyException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="5" selection-start="142" selection-end="142" vertical-scroll-proportion="0.36585367">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/Serialization/Driver/NativeDriver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.6666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="66" selection-start="1681" selection-end="1681" vertical-scroll-proportion="0.57723576">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#65#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="24" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-11.625">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="9" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.47696477">
@@ -794,16 +659,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_pk">
+    <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="44" selection-start="4154" selection-end="4154" vertical-scroll-proportion="0.4642857">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Helpers/UniversalGS.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="54" selection-start="353" selection-end="353" vertical-scroll-proportion="0.34438777">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="5" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.4107143">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#58#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="3" selection-start="1051" selection-end="1051" vertical-scroll-proportion="-11.958333">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#78#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="60" selection-start="1675" selection-end="1675" vertical-scroll-proportion="-8.208333">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#65#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/1871d2bddb79e33fefeb7d4275bab384_F0CCRK_rc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/6450aca4d64badd8b5fde0346e69c88c_a640M3_rc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/82073c7d600274f7c1def1405d9bc822_WjPv1S_rc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Behaviors/SlugableBehavior.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="71" selection-start="1326" selection-end="1326" vertical-scroll-proportion="-1.5255102">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="13" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.48214287">
+        <state line="64" column="85" selection-start="1783" selection-end="1783" vertical-scroll-proportion="0.38265306">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
             <element signature="e#64#88#0" expanded="true" />

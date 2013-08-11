@@ -65,10 +65,11 @@ class Validator
             $locatorMethod = "findOneBy{$property}";
 
             if(false !== ($foundModel = call_user_func([$this->model, $locatorMethod], $this->model->$property))) {
-                // TODO: remove this comment lines after debugging
-//                throw new UniqueConstrainFailException(
-//                    "Property {$property} should be unique. Duplicate on #{$foundModel->$primaryKey}"
-//                );
+                $primaryKeyFound = $foundModel->$primaryKey;
+
+                throw new UniqueConstrainFailException(
+                    "Property {$property} should be unique. Duplicate on #{$primaryKeyFound}"
+                );
             }
         }
     }
