@@ -10,7 +10,7 @@
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376230027104" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376247879345" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225648517" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
@@ -32,7 +32,7 @@
     <file path="/Row.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222605308" ignored="false" />
     <file path="/Inflector.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376176965950" ignored="false" />
     <file path="/PrimaryKeyIncrementalFileViolation.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376179110298" ignored="false" />
-    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376230431568" ignored="false" />
+    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376248287332" ignored="false" />
     <file path="/DefaultClient.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376205161894" ignored="false" />
     <file path="/BehaviorApplyable.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213015872" ignored="false" />
     <file path="/ABehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376212750122" ignored="false" />
@@ -73,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="25" selection-start="1193" selection-end="1193" vertical-scroll-proportion="-10.083333">
+            <state line="44" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="0.20689656">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
                 <element signature="e#78#98#0" expanded="true" />
@@ -85,10 +85,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableTrait.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TableTrait.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="71" selection-start="4359" selection-end="4359" vertical-scroll-proportion="1.0765306">
+            <state line="410" column="25" selection-start="13499" selection-end="13499" vertical-scroll-proportion="-13.75">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
                 <element signature="e#64#88#0" expanded="true" />
@@ -211,30 +211,8 @@
               <option name="myItemId" value="post_stf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post_stf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pkvf" />
+              <option name="myItemId" value="ridxf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -260,11 +238,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pkvf" />
+              <option name="myItemId" value="ridxf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="0.100_rcf" />
+              <option name="myItemId" value="tags_ridxf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post_stf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ridxf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tags_ridxf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="6cf06aa00496a90a" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post_stf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,12 +636,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959217" sideWeight="0.71728593" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959217" sideWeight="0.7867528" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959217" sideWeight="0.71728593" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28271407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21324718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -684,27 +718,6 @@
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/1871d2bddb79e33fefeb7d4275bab384_F0CCRK_rc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/6450aca4d64badd8b5fde0346e69c88c_a640M3_rc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/pkvf/0.100_rcf/82073c7d600274f7c1def1405d9bc822_WjPv1S_rc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,22 +814,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/ridxf/tags_ridxf/6cf06aa00496a90a/6cf06aa00496a90afa637cb9f787a911_ridx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="25" selection-start="1193" selection-end="1193" vertical-scroll-proportion="-10.083333">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="71" selection-start="4359" selection-end="4359" vertical-scroll-proportion="1.0765306">
+        <state line="410" column="25" selection-start="13499" selection-end="13499" vertical-scroll-proportion="-13.75">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
             <element signature="e#64#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="40" selection-start="2670" selection-end="2670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="0.20689656">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#78#98#0" expanded="true" />
           </folding>
         </state>
       </provider>
