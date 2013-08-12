@@ -50,9 +50,11 @@ $post->setTags([
     'tag1', 'tag2', 'testtag'
 ]);
 
-var_dump($post->save());
+$post->save();
+
+var_dump($post->getId());
 //*/
-///*
+/*
 $post = new Post();
 $post->getTable()->setResultOrder(Table::ORDER_DESC);
 
