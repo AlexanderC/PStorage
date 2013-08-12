@@ -44,13 +44,33 @@ DefaultClient::getInstance(new Client(new FileSystemDriver(__DIR__ . "/db")));
 
 /*
 $post = new Post();
+
+var_dump($post->countAll());
+//*/
+
+/*
+$post = new Post();
+$post->getTable()->setResultOrder(Table::ORDER_DESC);
+
+//var_dump($post->findRangeByPrimaryKey(50, 5, Post::COMPARATOR_LESS)->count());
+foreach($post->findRangeByPrimaryKey(50, 5, Post::COMPARATOR_LESS) as $entry) {
+    echo "entry #{$entry->getId()}\n";
+}
+
+//*/
+
+/*
+$post = new Post();
 $post->setTitle('new title');
 $post->setText('Lorem ipsum dolor sit amet...');
 $post->setTags([
     'tag1', 'tag2', 'testtag'
 ]);
 
-$post->save();
+for($i = 0; $i < 101; $i++) {
+    $post->id = Post::DEFAULT_VALUE;
+    $post->save();
+}
 
 var_dump($post->getId());
 //*/

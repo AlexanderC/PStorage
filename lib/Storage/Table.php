@@ -7,16 +7,14 @@ namespace PStorage\Storage;
 
 
 use PStorage\AModel;
+use PStorage\Model\TableDescriptorsConstants;
 use PStorage\Model\TableTrait;
 use PStorage\Storage\Drivers\IDriver;
 use PStorage\Storage\Serialization\Driver\IDriver as SerializationIDriver;
 
-class Table
+class Table implements TableDescriptorsConstants
 {
     use TableTrait;
-
-    const ORDER_ASC = 0x001;
-    const ORDER_DESC = 0x002;
 
     const MAIN_FOLDER_TPL = "%s_stf";
 

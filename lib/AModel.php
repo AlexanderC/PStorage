@@ -11,12 +11,15 @@ use PStorage\Model\Behaviors\ABehavior;
 use PStorage\Model\Behaviors\Helpers\BehaviorApplyable;
 use PStorage\Model\Definition as ModelDefinition;
 use PStorage\Model\Operations;
+use PStorage\Model\TableDescriptorsConstants;
 use PStorage\Model\Validator;
 use PStorage\Storage\Table;
 use PStorage\Storage\DefaultClient;
 use PStorage\Storage\Client;
 
-abstract class AModel extends UniversalGS implements Definition
+abstract class AModel
+    extends UniversalGS
+    implements Definition, TableDescriptorsConstants
 {
     use BehaviorApplyable;
     use Operations;
