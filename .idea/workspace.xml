@@ -42,7 +42,7 @@
     <file path="/MissingPrimaryKeyException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376218176641" ignored="false" />
     <file path="/Operations.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376336913720" ignored="false" />
     <file path="/MissingSearchValue.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376334260807" ignored="false" />
-    <file path="/performance.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376341419867" ignored="false" />
+    <file path="/performance.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376349202784" ignored="false" />
     <file path="/Timer.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376339957777" ignored="false" />
     <file path="/TableDescriptorsConstants.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376342645223" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="0.3094629">
+            <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-5.0416665">
               <folding>
                 <element signature="e#78#98#0" expanded="true" />
               </folding>
@@ -88,11 +88,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableTrait.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+      <file leaf-file-name="performance.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/performance.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="747" column="46" selection-start="26522" selection-end="26522" vertical-scroll-proportion="8.083333">
-              <folding />
+            <state line="107" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="4.1048594">
+              <folding>
+                <element signature="e#6#1270#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,13 +118,13 @@
         <option value="$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php" />
         <option value="$PROJECT_DIR$/lib/Model/Validator.php" />
         <option value="$PROJECT_DIR$/tests/Timer.php" />
-        <option value="$PROJECT_DIR$/tests/performance.php" />
         <option value="$PROJECT_DIR$/lib/Model/TableDescriptorsConstants.php" />
         <option value="$PROJECT_DIR$/lib/AModel.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
         <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/tests/performance.php" />
       </list>
     </option>
   </component>
@@ -188,6 +190,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post_stf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,7 +493,7 @@
       <recent name="$PROJECT_DIR$/lib/Storage" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Post.php">
+  <component name="RunManager" selected="PHP Script.performance.php">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -643,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/performance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="103" selection-start="235" selection-end="235" vertical-scroll-proportion="0.19181585">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="19" selection-start="349" selection-end="349" vertical-scroll-proportion="0.4347826">
@@ -699,16 +716,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="747" column="46" selection-start="26522" selection-end="26522" vertical-scroll-proportion="8.083333">
+        <state line="780" column="1" selection-start="27838" selection-end="27838" vertical-scroll-proportion="0.769821">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="0.3094629">
+        <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-5.0416665">
           <folding>
             <element signature="e#78#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/ridxf/title_ridxf/ea5fd4e186522c43/ea5fd4e186522c43e3dd7319a825a365_ridx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/performance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="4.1048594">
+          <folding>
+            <element signature="e#6#1270#0" expanded="true" />
           </folding>
         </state>
       </provider>

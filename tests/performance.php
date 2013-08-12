@@ -11,6 +11,7 @@
  *  1000 entries are returned without filters in 0.0453 seconds
  *  find one entry by multiple reference field from 1000 entries in 0.0013 seconds
  *  find one entry by single reference field from 1000 entries in 0.0010 seconds
+ *  find entries range with pk offset 500 and limit 100 (#501-#601) from 1000 entries in 0.0069 seconds
  *
  * Results, when all fields same each time:
  *  1000 entries are created with all infrastructure in 4.0991 seconds
@@ -18,6 +19,7 @@
  *  1000 entries are returned without filters in 0.0460 seconds
  *  find one entry by multiple reference field from 1000 entries in 0.1185 seconds
  *  find one entry by single reference field from 1000 entries in 0.1197 seconds
+ *  find entries range with pk offset 500 and limit 100 (#501-#601) from 1000 entries in 0.0069 seconds
  */
 
 require __DIR__ . "/Post.php";
@@ -87,7 +89,7 @@ $timer->stop();
 
 //*/
 
-///*
+/*
 $post = new Post();
 
 $timer->start();
@@ -96,5 +98,12 @@ $timer->stop();
 
 //*/
 
+/*
+$post = new Post();
+
+$timer->start();
+var_dump($post->findRangeByPrimaryKey(500, 100, Post::COMPARATOR_GREATER)->count());
+$timer->stop();
+//*/
 
 echo $timer->format() . "\n";
