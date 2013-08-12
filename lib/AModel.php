@@ -112,11 +112,11 @@ abstract class AModel extends UniversalGS implements Definition
 
         if(!($validator instanceof Validator)) {
             $validator = new Validator($this);
-            return $validator->validate();
         } else {
             $validator->setModel($this);
-            return $validator->validate();
         }
+
+        return call_user_func_array([$validator, 'validate'], func_get_args());
     }
 
     /**

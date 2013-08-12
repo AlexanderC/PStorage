@@ -42,11 +42,11 @@ class Validator
     }
 
     /**
+     * @param bool $excludePrimaryKey
      * @throws Exceptions\UniqueConstrainFailException
      * @throws Exceptions\PropertyRequiredException
-     * @return void
      */
-    public function validate()
+    public function validate($excludePrimaryKey = false)
     {
         $definition = $this->model->getDefinition();
         $required = $definition->getRequiredProperties();
@@ -62,6 +62,10 @@ class Validator
         }
 
         foreach($unique as $property) {
+            if($property === $primaryKey) {
+                continue;
+            }
+
             $locatorMethod = "findOneBy{$property}";
 
             if(false !== ($foundModel = call_user_func([$this->model, $locatorMethod], $this->model->$property))) {

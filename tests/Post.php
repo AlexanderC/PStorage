@@ -56,9 +56,15 @@ var_dump($post->save());
 $post = new Post();
 $post->getTable()->setResultOrder(Table::ORDER_DESC);
 
-foreach($post->findByTags('tag1') as $post) {
-    echo $post->getSlug() , "\n";
+$single;
+
+foreach($post->findByTags('tag1') as $single) {
+    echo $single->getSlug() , "\n";
 }
+/*
+$single->setTitle('new title with random- ' . rand(0, 10000));
+var_dump($single->save());
+//*/
 //*/
 
 /*
