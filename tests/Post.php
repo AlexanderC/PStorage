@@ -60,3 +60,12 @@ foreach($post->findByTags('tag1') as $post) {
     echo $post->getSlug() , "\n";
 }
 //*/
+
+/*
+$post = new Post();
+$post->getTable()->setResultOrder(Table::ORDER_ASC);
+
+$first = $post->findOneByTags('tag1');
+
+var_dump($first->delete());
+ //*/

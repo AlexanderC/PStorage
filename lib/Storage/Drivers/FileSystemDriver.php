@@ -41,6 +41,7 @@ class FileSystemDriver implements IDriver
      * @param string $file
      * @param string $string
      * @return bool
+     * @throws \RuntimeException
      */
     public function write($file, $string)
     {
@@ -70,6 +71,7 @@ class FileSystemDriver implements IDriver
     /**
      * @param string $file
      * @return string
+     * @throws \RuntimeException
      */
     public function read($file)
     {
@@ -108,6 +110,16 @@ class FileSystemDriver implements IDriver
         }
 
         return $result;
+    }
+
+    /**
+     * @param string $file
+     * @return bool
+     */
+    public function delete($file)
+    {
+        $file = $this->getAbsoluteFilePath($file);
+        return @unlink($file);
     }
 
     /**

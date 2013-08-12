@@ -28,6 +28,12 @@ interface IDriver
     public function exists($file);
 
     /**
+     * @param string $file
+     * @return bool
+     */
+    public function delete($file);
+
+    /**
      * @param string $directory
      * @return bool
      */
