@@ -10,7 +10,7 @@
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376349042922" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418730136" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376338111802" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
@@ -37,7 +37,7 @@
     <file path="/BehaviorApplyable.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213015872" ignored="false" />
     <file path="/ABehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376212750122" ignored="false" />
     <file path="/SlugableBehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376226237280" ignored="false" />
-    <file path="/Collection.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376228841110" ignored="false" />
+    <file path="/Collection.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418469484" ignored="false" />
     <file path="/CollectionInterface.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376214207603" ignored="false" />
     <file path="/MissingPrimaryKeyException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376218176641" ignored="false" />
     <file path="/Operations.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376336913720" ignored="false" />
@@ -45,6 +45,7 @@
     <file path="/performance.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376349202784" ignored="false" />
     <file path="/Timer.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376339957777" ignored="false" />
     <file path="/TableDescriptorsConstants.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376342645223" ignored="false" />
+    <file path="/Paginator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418647895" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,23 +78,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-5.0416665">
+            <state line="45" column="0" selection-start="962" selection-end="962" vertical-scroll-proportion="0.23017903">
               <folding>
                 <element signature="e#78#98#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="performance.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/performance.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="4.1048594">
-              <folding>
-                <element signature="e#6#1270#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,9 +99,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Model/Behaviors/SlugableBehavior.php" />
         <option value="$PROJECT_DIR$/lib/Helpers/CollectionInterface.php" />
-        <option value="$PROJECT_DIR$/lib/Collection.php" />
         <option value="$PROJECT_DIR$/lib/Storage/PrimaryKey.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Exceptions/MissingSearchValue.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Drivers/IDriver.php" />
@@ -123,8 +111,10 @@
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
         <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
-        <option value="$PROJECT_DIR$/tests/Post.php" />
         <option value="$PROJECT_DIR$/tests/performance.php" />
+        <option value="$PROJECT_DIR$/lib/Collection.php" />
+        <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
+        <option value="$PROJECT_DIR$/tests/Post.php" />
       </list>
     </option>
   </component>
@@ -161,6 +151,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,28 +181,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PStorage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="post_stf" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -461,18 +430,17 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/performance.php" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/performance.php" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -493,7 +461,7 @@
       <recent name="$PROJECT_DIR$/lib/Storage" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.performance.php">
+  <component name="RunManager" selected="PHP Script.Post.php">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -549,14 +517,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25202593" sideWeight="0.7145161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560778" sideWeight="0.7145161" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -565,6 +532,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959217" sideWeight="0.71728593" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -631,6 +599,22 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="28" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#78#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/performance.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="37" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Definition.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5">
@@ -643,28 +627,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Validator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="13" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.96153843">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#65#85#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="66" column="13" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.96153843" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_hardware_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-28.285715">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-28.285715" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Timer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.23017903">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="6" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.23017903" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
@@ -698,11 +671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/PrimaryKey.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="314" selection-end="314" vertical-scroll-proportion="0.12698413">
-          <folding>
-            <element signature="e#67#127#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="14" column="44" selection-start="314" selection-end="314" vertical-scroll-proportion="0.12698413" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
@@ -716,32 +685,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="780" column="1" selection-start="27838" selection-end="27838" vertical-scroll-proportion="0.769821">
-          <folding />
-        </state>
+        <state line="780" column="1" selection-start="27838" selection-end="27838" vertical-scroll-proportion="0.769821" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+    <entry file="file://$PROJECT_DIR$/lib/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="989" selection-end="989" vertical-scroll-proportion="-5.0416665">
-          <folding>
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/db/post_stf/ridxf/title_ridxf/ea5fd4e186522c43/ea5fd4e186522c43e3dd7319a825a365_ridx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="239" column="21" selection-start="6351" selection-end="6351" vertical-scroll-proportion="0.38618925">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/performance.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="0" selection-start="2544" selection-end="2544" vertical-scroll-proportion="4.1048594">
+        <state line="8" column="37" selection-start="325" selection-end="325" vertical-scroll-proportion="0.03836317">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Helpers/Paginator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="105" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.5396419">
           <folding>
-            <element signature="e#6#1270#0" expanded="true" />
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#67#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="962" selection-end="962" vertical-scroll-proportion="0.23017903">
+          <folding>
+            <element signature="e#78#98#0" expanded="true" />
           </folding>
         </state>
       </provider>

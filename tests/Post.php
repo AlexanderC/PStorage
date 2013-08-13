@@ -10,6 +10,7 @@ use PStorage\Storage\DefaultClient;
 use PStorage\Storage\Drivers\FileSystemDriver;
 use PStorage\Storage\Client;
 use PStorage\Storage\Table;
+use PStorage\Helpers\Paginator;
 
 class Post extends AModel
 {
@@ -45,15 +46,27 @@ DefaultClient::getInstance(new Client(new FileSystemDriver(__DIR__ . "/db")));
 /*
 $post = new Post();
 
+$paginator = new Paginator($post, 50, 10);
+
+foreach($paginator->getEntries() as $entry) {
+    echo "entry #{$entry->getId()}\n";
+}
+//*/
+
+/*
+$post = new Post();
+
 var_dump($post->countAll());
 //*/
 
 /*
 $post = new Post();
-$post->getTable()->setResultOrder(Table::ORDER_DESC);
+$post->getTable()->setResultOrder(Table::ORDER_ASC);
+
+$entry;
 
 //var_dump($post->findRangeByPrimaryKey(50, 5, Post::COMPARATOR_LESS)->count());
-foreach($post->findRangeByPrimaryKey(50, 5, Post::COMPARATOR_LESS) as $entry) {
+foreach($post->findRangeByPrimaryKey(50, 5, Post::COMPARATOR_GREATER) as $entry) {
     echo "entry #{$entry->getId()}\n";
 }
 
