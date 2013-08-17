@@ -4,17 +4,17 @@
     <list default="true" id="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" name="Default" comment="" />
     <ignored path="PStorage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main_scheme.txt" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222076282" ignored="false" />
+    <file path="/main_scheme.txt" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376735143201" ignored="false" />
     <file path="/autoloader.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376127796988" ignored="false" />
-    <file path="/AModel.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376342707153" ignored="false" />
+    <file path="/AModel.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376734104124" ignored="false" />
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418730136" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376752430052" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376338111802" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
-    <file path="/Table.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376342689137" ignored="false" />
+    <file path="/Table.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376736482664" ignored="false" />
     <file path="/a.dummy" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376334269504" ignored="false" />
     <file path="/PrimaryKey.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376229596255" ignored="false" />
     <file path="/FileSystemDriver.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376335671455" ignored="false" />
@@ -46,6 +46,13 @@
     <file path="/Timer.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376339957777" ignored="false" />
     <file path="/TableDescriptorsConstants.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376342645223" ignored="false" />
     <file path="/Paginator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418647895" ignored="false" />
+    <file path="/ComparatorApplyable.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376736688891" ignored="false" />
+    <file path="/AComparator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376742665831" ignored="false" />
+    <file path="/PredefinedComparators.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376734490121" ignored="false" />
+    <file path="/NumberComparator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376742736194" ignored="false" />
+    <file path="/SearchTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376735263419" ignored="false" />
+    <file path="/Node.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376744016771" ignored="false" />
+    <file path="/BalancedBinaryTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376751713180" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,18 +79,47 @@
       <file leaf-file-name="main_scheme.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="40" selection-start="2670" selection-end="2670" vertical-scroll-proportion="0.0">
+            <state line="57" column="70" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="962" selection-end="962" vertical-scroll-proportion="0.23017903">
+            <state line="75" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-7.9166665">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableTrait.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Node.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="142" column="5" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-88.75">
               <folding>
-                <element signature="e#78#98#0" expanded="true" />
+                <element signature="e#6#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BalancedBinaryTree.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="162" column="12" selection-start="4281" selection-end="4281" vertical-scroll-proportion="-0.11749347">
+              <folding>
+                <element signature="e#6#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,22 +135,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Helpers/CollectionInterface.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/PrimaryKey.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/Exceptions/MissingSearchValue.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/Drivers/IDriver.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php" />
-        <option value="$PROJECT_DIR$/lib/Model/Validator.php" />
-        <option value="$PROJECT_DIR$/tests/Timer.php" />
-        <option value="$PROJECT_DIR$/lib/Model/TableDescriptorsConstants.php" />
-        <option value="$PROJECT_DIR$/lib/AModel.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
         <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
         <option value="$PROJECT_DIR$/tests/performance.php" />
         <option value="$PROJECT_DIR$/lib/Collection.php" />
         <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php" />
+        <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
+        <option value="$PROJECT_DIR$/lib/Storage/SearchTree.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php" />
+        <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
+        <option value="$PROJECT_DIR$/lib/AModel.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Comparators/AComparator.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php" />
+        <option value="$PROJECT_DIR$/lib/Storage/Tree/Node.php" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php" />
       </list>
     </option>
   </component>
@@ -213,6 +249,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tree" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -366,6 +424,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Comparators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Comparators" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Helpers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PStorage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Behaviors" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -435,12 +541,12 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/performance.php" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -523,18 +629,18 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2560778" sideWeight="0.7145161" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012966" sideWeight="0.7016129" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.716129" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28548387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2983871" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959217" sideWeight="0.71728593" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -599,70 +705,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="28" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/performance.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Definition.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#65#103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="13" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.96153843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_hardware_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-28.285715" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Timer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="51" selection-end="51" vertical-scroll-proportion="0.23017903" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="349" selection-end="349" vertical-scroll-proportion="0.4347826">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#67#87#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="578" selection-end="578" vertical-scroll-proportion="0.26408452">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#58#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/TableDescriptorsConstants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="34" selection-start="236" selection-end="236" vertical-scroll-proportion="0.5370844">
+        <state line="10" column="36" selection-start="156" selection-end="156" vertical-scroll-proportion="0.38265306">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
@@ -671,12 +716,81 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/PrimaryKey.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="314" selection-end="314" vertical-scroll-proportion="0.12698413" />
+        <state line="13" column="31" selection-start="242" selection-end="269" vertical-scroll-proportion="0.15831135">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
+    <entry file="file://$PROJECT_DIR$/lib/Storage/ReversedIndex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="52" selection-start="3928" selection-end="3928" vertical-scroll-proportion="0.81329924">
+        <state line="72" column="4" selection-start="1373" selection-end="1574" vertical-scroll-proportion="0.15306123">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Behaviors/Helpers/BehaviorApplyable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="103" selection-start="1459" selection-end="1550" vertical-scroll-proportion="0.15561225">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/TableDescriptorsConstants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="9" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.4715447">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="108" selection-start="875" selection-end="875" vertical-scroll-proportion="-25.625">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="89" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-4.242347">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#58#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="9" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-0.038265307">
+          <folding>
+            <element signature="e#66#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/AComparator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="20" selection-start="170" selection-end="170" vertical-scroll-proportion="0.4878049">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="5" selection-start="417" selection-end="417" vertical-scroll-proportion="0.83739835">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
@@ -685,38 +799,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="780" column="1" selection-start="27838" selection-end="27838" vertical-scroll-proportion="0.769821" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Collection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="21" selection-start="6351" selection-end="6351" vertical-scroll-proportion="0.38618925">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/performance.php">
+    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="37" selection-start="325" selection-end="325" vertical-scroll-proportion="0.03836317">
+        <state line="57" column="70" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Helpers/Paginator.php">
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="105" selection-start="2773" selection-end="2773" vertical-scroll-proportion="0.5396419">
+        <state line="142" column="5" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-88.75">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#67#87#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="962" selection-end="962" vertical-scroll-proportion="0.23017903">
+        <state line="75" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-7.9166665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="162" column="12" selection-start="4281" selection-end="4281" vertical-scroll-proportion="-0.11749347">
           <folding>
-            <element signature="e#78#98#0" expanded="true" />
+            <element signature="e#6#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

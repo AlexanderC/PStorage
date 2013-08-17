@@ -50,3 +50,9 @@
 
                                 Sub folders are sha1 from first 16 bytes of MD5 hashed file name.
                            ]
+
+
+
+For more advanced searches would be used binary search tree located in [ bstr ] folder.
+Search comparator should be defined for each field.
+Search comparators tree nodes are located in %field%_bstrnds subfolder

@@ -5,7 +5,6 @@
 
 namespace PStorage\Storage;
 
-
 use PStorage\AModel;
 use PStorage\Model\TableDescriptorsConstants;
 use PStorage\Model\TableTrait;
@@ -44,6 +43,11 @@ class Table implements TableDescriptorsConstants
     protected $reversedIndexes = [];
 
     /**
+     * @var array
+     */
+    protected $searchTrees = [];
+
+    /**
      * @var Row
      */
     protected $row;
@@ -71,12 +75,16 @@ class Table implements TableDescriptorsConstants
             $this->reversedIndexes[$property] = new ReversedIndex($this);
             $this->reversedIndexes[$property]->setProperty($property);
             $this->reversedIndexes[$property]->setRelationType(ReversedIndex::REL_ONE); // assure this
+
+            if($this->model->hasComparator($property)) {
+                $this->searchTrees[$property] = new SearchTree($this);
+                $this->searchTrees[$property]->setProperty($property);
+            }
         }
 
         foreach($this->model->getDefinition()->getManyRelationProperties() as $manyRelProperty) {
             $this->reversedIndexes[$manyRelProperty]->setRelationType(ReversedIndex::REL_MANY);
         }
-
 
         $this->assureStructure();
     }
@@ -175,6 +183,14 @@ class Table implements TableDescriptorsConstants
     }
 
     /**
+     * @return array
+     */
+    public function getSearchTrees()
+    {
+        return $this->searchTrees;
+    }
+
+    /**
      * @return \PStorage\Storage\PrimaryKey
      */
     public function getPrimaryKey()
@@ -203,6 +219,16 @@ class Table implements TableDescriptorsConstants
                 }
 
                 $result &= $this->storage->createDirectory($reversedIndex->getPropertyFolder());
+            }
+
+            $i = 0;
+            foreach($this->searchTrees as $searchTree) {
+                if(0 === $i) {
+                    $result &= $this->storage->createDirectory($searchTree->getMainFolder());
+                    $i++;
+                }
+
+                $result &= $this->storage->createDirectory($searchTree->getPropertyFolder());
             }
 
             $result &= $this->storage->write($this->primaryKey->getIncrementalFile(), 1);

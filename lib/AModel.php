@@ -9,6 +9,8 @@ use PStorage\Helpers\DefinitionHelper;
 use PStorage\Helpers\UniversalGS;
 use PStorage\Model\Behaviors\ABehavior;
 use PStorage\Model\Behaviors\Helpers\BehaviorApplyable;
+use PStorage\Model\Comparators\Helpers\ComparatorApplyable;
+use PStorage\Model\Comparators\Helpers\PredefinedComparators;
 use PStorage\Model\Definition as ModelDefinition;
 use PStorage\Model\Operations;
 use PStorage\Model\TableDescriptorsConstants;
@@ -19,9 +21,10 @@ use PStorage\Storage\Client;
 
 abstract class AModel
     extends UniversalGS
-    implements Definition, TableDescriptorsConstants
+    implements Definition, TableDescriptorsConstants, PredefinedComparators
 {
     use BehaviorApplyable;
+    use ComparatorApplyable;
     use Operations;
 
     const DEFAULT_VALUE = null;
@@ -35,6 +38,11 @@ abstract class AModel
      * @var bool
      */
     private $usesBehaviorApplyableTrait;
+
+    /**
+     * @var bool
+     */
+    private $usesComparatorApplyableTrait;
 
     /**
      * @var Storage\Table
@@ -51,10 +59,13 @@ abstract class AModel
         /** @var Client $client */
         $client = DefaultClient::getInstance()->getClient();
 
-        $this->table = new Table($this, $client->getStorage(), $client->getSerializer());
-
         $this->usesBehaviorApplyableTrait = in_array(
             "PStorage\\Model\\Behaviors\\Helpers\\BehaviorApplyable",
+            class_uses(get_class())
+        );
+
+        $this->usesComparatorApplyableTrait = in_array(
+            "PStorage\\Model\\Comparators\\Helpers\\ComparatorApplyable",
             class_uses(get_class())
         );
 
@@ -66,6 +77,12 @@ abstract class AModel
         if(true === $this->usesBehaviorApplyableTrait) {
             $this->importBehaviors();
         }
+
+        if(true === $this->usesComparatorApplyableTrait) {
+            $this->importComparators();
+        }
+
+        $this->table = new Table($this, $client->getStorage(), $client->getSerializer());
     }
 
     /**
