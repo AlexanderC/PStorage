@@ -16,6 +16,16 @@ class BalancedBinaryTree
     protected $root = null;
 
     /**
+     * @var null|Node
+     */
+    protected $leftMost = null;
+
+    /**
+     * @var null|Node
+     */
+    protected $rightMost = null;
+
+    /**
      * @var AComparator
      */
     protected $comparator;
@@ -26,6 +36,30 @@ class BalancedBinaryTree
     public function __construct(AComparator $comparator)
     {
         $this->comparator = $comparator;
+    }
+
+    /**
+     * @return null|\PStorage\Storage\Tree\Node
+     */
+    public function getLeftMost()
+    {
+        return $this->leftMost;
+    }
+
+    /**
+     * @return null|\PStorage\Storage\Tree\Node
+     */
+    public function getRightMost()
+    {
+        return $this->rightMost;
+    }
+
+    /**
+     * @return null|\PStorage\Storage\Tree\Node
+     */
+    public function getRoot()
+    {
+        return $this->root;
     }
 
     /**
@@ -54,6 +88,10 @@ class BalancedBinaryTree
                 $parentNode->setRight();
             }
         } elseif(null === ($rightNode = $node->getRight()) || null === ($leftNode = $node->getLeft())) {
+            if(!isset($leftNode)) {
+                $leftNode = $node->getLeft();
+            }
+
             $replacement = $rightNode instanceof Node ? $rightNode : $leftNode;
 
             if($this->comparator->compare($value, $parentNode->getKey()) === AComparator::LESS) {
@@ -113,6 +151,8 @@ class BalancedBinaryTree
         if(null === $this->root)
         {
             $this->root = new Node($value);
+            $this->leftMost = $this->root;
+            $this->rightMost = $this->root;
             return $this->root;
         }
 
@@ -145,6 +185,124 @@ class BalancedBinaryTree
 
             $current = $next;
         } while(true);
+    }
+
+    /**
+     * @param mixed $lower
+     * @param mixed $higher
+     * @return array
+     * @throws \OutOfBoundsException
+     */
+    public function & findRange($lower, $higher)
+    {
+        $resultSet = [];
+
+        if(null === $this->root) {
+            return $resultSet;
+        }
+
+        if(!($this->comparator->compare($lower, $this->rightMost->getKey()) === AComparator::LESS)) {
+            throw new \OutOfBoundsException("Lower value should be greater than right-most value or the tree");
+        }
+
+        if($this->comparator->compare($lower, $this->leftMost->getKey()) === AComparator::LESS) {
+            $lower = $this->leftMost->getKey();
+        }
+
+        if($this->comparator->compare($higher, $this->rightMost->getKey()) === AComparator::GREATER) {
+            $higher = $this->rightMost->getKey();
+        }
+
+        $resultSet = $this->findRangeRaw($lower, $higher, $this->root);
+
+        return $resultSet;
+    }
+
+    /**
+     * @param mixed $lower
+     * @param mixed $higher
+     * @param Node $node
+     */
+    protected function & findRangeRaw($lower, $higher, Node $node)
+    {
+        $resultSet = [];
+
+        $leftNode = $node->getLeft();
+        $rightNode = $node->getRight();
+
+        if($leftNode instanceof Node && $node->getKey() > $lower) {
+            $resultSet += $this->findRangeRaw($lower, $higher, $leftNode);
+        }
+
+        if($node->getKey() >= $lower && $node->getKey() <= $higher) {
+            $resultSet[$node->getKey()] = $node;
+        }
+
+        if($rightNode instanceof Node && $node->getKey() < $higher) {
+            $resultSet += $this->findRangeRaw($lower, $higher, $rightNode);
+        }
+
+        return $resultSet;
+    }
+
+    /**
+     * @param mixed $value
+     * @return array
+     */
+    public function & findGreater($value)
+    {
+        $resultSet = [];
+
+        if(null === $this->root) {
+            return $resultSet;
+        }
+
+        if(!($this->comparator->compare($value, $this->rightMost->getKey()) === AComparator::LESS)) {
+            return $resultSet;
+        }
+
+        $resultSet = $this->findRange($value, $this->rightMost->getKey());
+
+        uksort($resultSet, [$this->comparator, 'compare']);
+
+        $firstNode = reset($resultSet);
+
+        if($firstNode instanceof Node && $firstNode->getKey() === $value) {
+            unset($resultSet[key($resultSet)]);
+        }
+
+        return $resultSet;
+    }
+
+    /**
+     * @param mixed $value
+     * @return array
+     */
+    public function & findLess($value)
+    {
+        $resultSet = [];
+
+        if(null === $this->root) {
+            return $resultSet;
+        }
+
+        if(!($this->comparator->compare($value, $this->leftMost->getKey()) === AComparator::GREATER)) {
+            return $resultSet;
+        }
+
+        $resultSet = $this->findRange($this->leftMost->getKey(), $value);
+
+        uksort($resultSet, [$this->comparator, 'compare']);
+
+        $resultSet = array_reverse($resultSet, true);
+
+        $firstNode = reset($resultSet);
+
+        if($firstNode instanceof Node && $firstNode->getKey() === $value) {
+            unset($resultSet[key($resultSet)]);
+        }
+
+        return $resultSet;
     }
 
     /**
@@ -188,6 +346,9 @@ class BalancedBinaryTree
         $rawValues = $this->mapTree($this->root);
 
         uksort($rawValues, [$this->comparator, 'compare']);
+
+        $this->rightMost = end($rawValues);
+        $this->leftMost = reset($rawValues);
 
         $this->persistByRawMiddle($rawValues);
     }
