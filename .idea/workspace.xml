@@ -4,7 +4,7 @@
     <list default="true" id="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" name="Default" comment="" />
     <ignored path="PStorage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main_scheme.txt" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376735143201" ignored="false" />
+    <file path="/main_scheme.txt" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376854066366" ignored="false" />
     <file path="/autoloader.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376127796988" ignored="false" />
     <file path="/AModel.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376734104124" ignored="false" />
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
@@ -76,19 +76,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_scheme.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main_scheme.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="70" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
+            <state line="58" column="50" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.9162011">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="0" selection-start="4302" selection-end="4302" vertical-scroll-proportion="1.6287425">
+            <state line="151" column="0" selection-start="4302" selection-end="4302" vertical-scroll-proportion="-22.666666">
               <folding>
                 <element signature="e#78#98#0" expanded="true" />
               </folding>
@@ -109,7 +109,6 @@
         <option value="$PROJECT_DIR$/lib/Collection.php" />
         <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php" />
-        <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/lib/AModel.php" />
@@ -122,6 +121,7 @@
         <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
         <option value="$PROJECT_DIR$/tests/performance.php" />
+        <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
       </list>
     </option>
   </component>
@@ -710,15 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="951" selection-end="951" vertical-scroll-proportion="0.6830986">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/AModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="89" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-2.6179578">
@@ -745,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="70" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/performance.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="2007" selection-end="2007" vertical-scroll-proportion="0.389049">
@@ -768,12 +752,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="36" selection-start="215" selection-end="221" vertical-scroll-proportion="0.518732">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="0" selection-start="4302" selection-end="4302" vertical-scroll-proportion="1.6287425">
+        <state line="151" column="0" selection-start="4302" selection-end="4302" vertical-scroll-proportion="-22.666666">
           <folding>
             <element signature="e#78#98#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="50" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.9162011">
+          <folding />
         </state>
       </provider>
     </entry>

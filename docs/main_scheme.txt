@@ -55,4 +55,5 @@
 
 For more advanced searches would be used binary search tree located in [ bstr ] folder.
 Search comparator should be defined for each field.
-Search comparators tree nodes are located in %field%_bstrnds subfolder
+Search comparators tree nodes are located in %field%_bstrnds subfolder in a big bstrdf file...
+NOTE: bstrdf should be chunked in the near feature
