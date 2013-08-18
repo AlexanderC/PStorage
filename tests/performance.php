@@ -5,6 +5,13 @@
  * This results are returned with native PHP serialization, MsgPack would give better results...
  * Note: that also means that in case of same field values each time would be considerable improvements
  *
+ * IMPORTANT: The time of CRUD operations would increase considerably if we have an comparable value.
+ *              For example for inserting 1000 entries with same data(except comparable field) when having
+ *              just one comparable field will cost 19.5728 seconds. But selection of an range of values costs
+ *              the same as simple selection(~ 0.0172 seconds from the middle of the tree, up to 100 rows).
+ *              The only limitation is the size of binary tree file that will grow up considerable and
+ *              does require a lot of RAM in cases you have more entries with different comparable fields values.
+ *
  * Results, when all fields different each time:
  *  1000 entries are created with all infrastructure in 3.9936 seconds
  *  1000 entries are counted without filters in 0.0007 seconds
@@ -28,6 +35,15 @@ require __DIR__ . "/Timer.php";
 $timer = new Timer();
 
 /*
+$post = new Post();
+
+$timer->start();
+var_dump($post->findRangeOfComparable(500, 600, 'old_id')->count());
+$timer->stop();
+
+//*/
+
+/*
 
 $timer->start();
 for($i = 0; $i < 1000; $i++) {
@@ -37,6 +53,7 @@ for($i = 0; $i < 1000; $i++) {
     $post->setTags([
         'tag1', 'tag2', 'testtag'
     ]);
+    $post->setOld_id($i);
 
     $post->save();
 }
