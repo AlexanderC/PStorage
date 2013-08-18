@@ -217,6 +217,8 @@ trait TableTrait
             $rowContent[$property] = $this->model->$property;
         }
 
+        $oldRowData = $serializer->unserialize($storage->read($rowContentFile));
+
         if(!$storage->write($rowContentFile, $serializer->serialize($rowContent))) {
             throw new AtomarityViolationException("Unable to persist changed model data");
         }
@@ -241,6 +243,63 @@ trait TableTrait
         foreach($definition->getAllPropertiesExceptPrimaryKey() as $property) {
             /** @var ReversedIndex $reversedIndex */
             $reversedIndex = $table->getReversedIndexes()[$property];
+
+            if(AModel::DEFAULT_VALUE !== $table->getModel()->$property
+                && $table->getModel()->hasComparator($property)) {
+
+                $searchTree = $table->getSearchTrees()[$property];
+
+                $treeFile = $searchTree->getTreeFile();
+
+                if($storage->exists($treeFile)) {
+                    /** @var BalancedBinaryTree $tree */
+                    $tree = @unserialize($storage->read($treeFile));
+
+                    if(false === $tree) {
+                        throw new AtomarityViolationException("Unable to read property binary search tree file");
+                    }
+
+                    $tree->setComparator($table->getModel()->getComparators()[$property]);
+                } else {
+                    /** @var BalancedBinaryTree $tree */
+                    $tree = new BalancedBinaryTree($table->getModel()->getComparators()[$property]);
+                }
+
+                // remove old data reference case exists
+                if(($oldNode = $tree->find($oldRowData[$property])) instanceof Node) {
+                    $oldNodeData = $oldNode->getData();
+                    $oldKey = array_search($index, $oldNodeData, true);
+
+
+
+                    if(false !== $oldKey) {
+                        unset($oldNodeData[$oldKey]);
+
+                        if(empty($oldNodeData)) {
+                            $tree->delete($oldRowData[$property]);
+                        } else {
+                            $oldNode->setData($oldNodeData);
+                        }
+                    }
+                }
+
+                $value = $table->getModel()->$property;
+                /** @var Node $node */
+                if($node = $tree->find($value) instanceof Node) {
+                    $data = $node->getData();
+                    $data[] = $index;
+                    $node->setData($data);
+                } else {
+                    $node = $tree->insert($value);
+                    $node->setData([$index]);
+                }
+
+                if(!$storage->write($treeFile, serialize($tree))) {
+                    throw new AtomarityViolationException(
+                        "Unable to persist modified property binary search tree file"
+                    );
+                }
+            }
 
             if(!in_array($property, $manyRelationProperties)) {
                 $reversedIndexSubfolder = $reversedIndex->getReversedIndexSubfolder($rowContent[$property]);
@@ -319,6 +378,8 @@ trait TableTrait
         $reversedIndexFiles = $this->getReversedIndexFiles($indexFileData);
         $rowContentFile = $indexFileData[$index];
 
+        $oldRowData = $serializer->unserialize($storage->read($rowContentFile));
+
         if(!$storage->delete($rowContentFile)) {
             throw new AtomarityViolationException("Unable to delete row content file");
         }
@@ -339,6 +400,51 @@ trait TableTrait
 
             if(!$storage->write($reversedIndexFile, $serializer->serialize($reversedIndexContent))) {
                 throw new AtomarityViolationException("Unable to persist modified reversed index file");
+            }
+        }
+
+        foreach($definition->getAllPropertiesExceptPrimaryKey() as $property) {
+            if(AModel::DEFAULT_VALUE !== $table->getModel()->$property
+                && $table->getModel()->hasComparator($property)) {
+
+                $searchTree = $table->getSearchTrees()[$property];
+
+                $treeFile = $searchTree->getTreeFile();
+
+                if($storage->exists($treeFile)) {
+                    /** @var BalancedBinaryTree $tree */
+                    $tree = @unserialize($storage->read($treeFile));
+
+                    if(false === $tree) {
+                        throw new AtomarityViolationException("Unable to read property binary search tree file");
+                    }
+
+                    $tree->setComparator($table->getModel()->getComparators()[$property]);
+                } else {
+                    continue;
+                }
+
+                // remove old data reference case exists
+                if(($oldNode = $tree->find($oldRowData[$property])) instanceof Node) {
+                    $oldNodeData = $oldNode->getData();
+                    $oldKey = array_search($index, $oldNodeData, true);
+
+                    if($oldKey) {
+                        unset($oldNodeData[$oldKey]);
+
+                        if(empty($oldNodeData)) {
+                            $tree->delete($oldRowData[$property]);
+                        } else {
+                            $oldNode->setData($oldNodeData);
+                        }
+
+                        if(!$storage->write($treeFile, serialize($tree))) {
+                            throw new AtomarityViolationException(
+                                "Unable to persist modified property binary search tree file"
+                            );
+                        }
+                    }
+                }
             }
         }
     }
