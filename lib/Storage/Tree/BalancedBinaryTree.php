@@ -181,7 +181,97 @@ class BalancedBinaryTree
      */
     protected function balance()
     {
+        if(null === $this->root) {
+            return;
+        }
 
+        $rawValues = $this->mapTree($this->root);
+
+        uksort($rawValues, [$this->comparator, 'compare']);
+
+        $this->persistByRawMiddle($rawValues);
+    }
+
+    /**
+     * @param array $rawValues
+     * @param Node $parent
+     */
+    protected function persistByRawMiddle(array & $rawValues, Node $parent = null)
+    {
+        $topIndex = floor(($rawValuesCount = count($rawValues)) / 2);
+
+        reset($rawValues);
+        for($i = 0; $rawValuesCount > 1 && $i < $topIndex; next($rawValues), $i++);
+        $topKey = key($rawValues);
+
+        /** @var Node $current */
+        $current = $rawValues[$topKey];
+        unset($rawValues[$topKey]);
+
+        $current->setLeft();
+        $current->setRight();
+
+        if(null === $parent) {
+            $current->setParent();
+            $this->root = $current;
+        } else {
+            $current->setParent($parent);
+        }
+
+        if(!empty($rawValues)) {
+            @list($left, $right) = @array_chunk($rawValues, $topIndex, true);
+
+            if(null !== $left) {
+                $leftIndex = floor(($rawLeftValuesCount = count($left)) / 2);
+
+                reset($left);
+                for($i = 0; $rawLeftValuesCount > 1 && $i < $leftIndex; next($left), $i++);
+                $leftKey = key($left);
+
+                /** @var Node $current */
+                $leftNode = $rawValues[$leftKey];
+
+                $current->setLeft($leftNode);
+
+                $this->persistByRawMiddle($left, $current);
+            }
+
+            if(null !== $right) {
+                $rightIndex = floor(($rawRightValuesCount = count($right)) / 2);
+
+                reset($right);
+                for($i = 0; $rawRightValuesCount > 1 && $i < $rightIndex; next($right), $i++);
+                $rightKey = key($right);
+
+                /** @var Node $current */
+                $rightNode = $rawValues[$rightKey];
+
+                $current->setright($rightNode);
+                
+                $this->persistByRawMiddle($right, $current);
+            }
+        }
+    }
+
+    /**
+     * @param Node $node
+     * @return array
+     */
+    protected function & mapTree(Node $node)
+    {
+        $resultSet = [];
+
+        if(null !== ($leftNode = $node->getLeft())) {
+            $resultSet += $this->mapTree($leftNode);
+        }
+
+        $resultSet[$node->getKey()] = $node;
+
+        if(null !== ($rightNode = $node->getRight())) {
+            $resultSet += $this->mapTree($rightNode);
+        }
+
+        return $resultSet;
     }
 
     /**
@@ -208,5 +298,15 @@ class BalancedBinaryTree
         return [
             'root'
         ];
+    }
+
+    /**
+     * @return string
+     */
+    public function _dump()
+    {
+        if($this->root instanceof Node) {
+            return $this->root->_dump();
+        }
     }
 }

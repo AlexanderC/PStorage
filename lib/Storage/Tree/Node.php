@@ -63,7 +63,7 @@ class Node
     /**
      * @param Node $parent
      */
-    public function setParent(Node $parent)
+    public function setParent(Node $parent = null)
     {
         $this->parent = $parent;
     }
@@ -140,5 +140,26 @@ class Node
         return [
             'parent', 'left', 'right', 'data', 'key'
         ];
+    }
+
+    /**
+     * @param string $prepend
+     * @return string
+     */
+    public function _dump($prepend = "")
+    {
+        $dump = "";
+
+        if($this->getRight() instanceof Node) {
+            $dump .= $this->getRight()->_dump($prepend . '-----');
+        }
+
+        $dump .= "{$prepend}|{$this->getKey()}|\n";
+
+        if($this->getLeft() instanceof Node) {
+            $dump .= $this->getLeft()->_dump($prepend . '-----');
+        }
+
+        return $dump;
     }
 }

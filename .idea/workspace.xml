@@ -10,7 +10,7 @@
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376752430052" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376813427148" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376338111802" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
@@ -51,8 +51,8 @@
     <file path="/PredefinedComparators.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376734490121" ignored="false" />
     <file path="/NumberComparator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376742736194" ignored="false" />
     <file path="/SearchTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376735263419" ignored="false" />
-    <file path="/Node.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376744016771" ignored="false" />
-    <file path="/BalancedBinaryTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376752748695" ignored="false" />
+    <file path="/Node.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376813967189" ignored="false" />
+    <file path="/BalancedBinaryTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376815873191" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +88,7 @@
       <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-7.9166665">
+            <state line="80" column="18" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-15.625">
               <folding />
             </state>
           </provider>
@@ -106,7 +106,7 @@
       <file leaf-file-name="Node.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="5" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-88.75">
+            <state line="65" column="50" selection-start="970" selection-end="970" vertical-scroll-proportion="-7.6666665">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
               </folding>
@@ -117,7 +117,7 @@
       <file leaf-file-name="BalancedBinaryTree.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="5" selection-start="4744" selection-end="4744" vertical-scroll-proportion="0.45169714">
+            <state line="253" column="5" selection-start="6912" selection-end="6912" vertical-scroll-proportion="3.245509">
               <folding>
                 <element signature="e#6#35#0" expanded="true" />
               </folding>
@@ -148,8 +148,8 @@
         <option value="$PROJECT_DIR$/lib/AModel.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/AComparator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php" />
-        <option value="$PROJECT_DIR$/lib/Storage/Tree/Node.php" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/lib/Storage/Tree/Node.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php" />
       </list>
     </option>
@@ -629,12 +629,12 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012966" sideWeight="0.7016129" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012966" sideWeight="0.62258065" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990307" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.716129" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.62258065" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2983871" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37741935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -811,25 +811,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="18" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-15.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="5" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-88.75">
+        <state line="65" column="50" selection-start="970" selection-end="970" vertical-scroll-proportion="-7.6666665">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="0" selection-start="3072" selection-end="3072" vertical-scroll-proportion="-7.9166665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="5" selection-start="4744" selection-end="4744" vertical-scroll-proportion="0.45169714">
+        <state line="253" column="5" selection-start="6912" selection-end="6912" vertical-scroll-proportion="3.245509">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
