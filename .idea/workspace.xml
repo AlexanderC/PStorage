@@ -10,7 +10,7 @@
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376856498799" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376856931932" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376338111802" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
@@ -88,7 +88,7 @@
       <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="27" selection-start="2432" selection-end="2432" vertical-scroll-proportion="1.7429577">
+            <state line="128" column="7" selection-start="4303" selection-end="4303" vertical-scroll-proportion="0.60387325">
               <folding>
                 <element signature="e#78#98#0" expanded="true" />
               </folding>
@@ -744,15 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="135" selection-end="169" vertical-scroll-proportion="-5.625">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="10" selection-start="47" selection-end="73" vertical-scroll-proportion="-3.125">
@@ -790,9 +781,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="186" column="5" selection-start="3917" selection-end="4501" vertical-scroll-proportion="0.70950705">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#58#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="27" selection-start="2432" selection-end="2432" vertical-scroll-proportion="1.7429577">
+        <state line="128" column="7" selection-start="4303" selection-end="4303" vertical-scroll-proportion="0.60387325">
           <folding>
             <element signature="e#78#98#0" expanded="true" />
           </folding>

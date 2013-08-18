@@ -52,7 +52,7 @@ class Post extends AModel
     /**
      * Behaviours are classes located at PStorage\Model\Behaviors namespace
      * that extends PStorage\Model\Behaviors\ABehavior abstract class.
-     * We can define 2 kinds of behaviours: Pre and Post persist.
+     * We can define 2 kind of behaviours: Pre and Post persist.
      *
      * For example check Slugable Behaviour that will generate unique slugs
      * for title field before persisting into DB
@@ -107,6 +107,32 @@ class Post extends AModel
         return [
             'old_id' => self::PROPERTY_NUMBER_COMPARATOR /* "number" */
         ];
+    }
+
+    /**
+     * This hook is called before persisting data
+     *
+     * @return void
+     */
+    protected function prePersist()
+    {
+        // THIS IS REQUIRED!
+        parent::prePersist();
+
+        // do whatever you want...
+    }
+
+    /**
+     * This hook is called after persisting data
+     *
+     * @return void
+     */
+    protected function postPersist()
+    {
+        // THIS IS REQUIRED!
+        parent::postPersist();
+
+        // do whatever you want...
     }
 }
 
