@@ -76,22 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main_scheme.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="50" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.0">
+            <state line="27" column="80" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.69948184">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/Post.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="7" selection-start="4303" selection-end="4303" vertical-scroll-proportion="0.60387325">
-              <folding>
-                <element signature="e#78#98#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -106,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Collection.php" />
         <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php" />
@@ -122,6 +110,7 @@
         <option value="$PROJECT_DIR$/tests/performance.php" />
         <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -737,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="50" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="10" selection-start="47" selection-end="73" vertical-scroll-proportion="-3.125">
@@ -793,10 +775,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="7" selection-start="4303" selection-end="4303" vertical-scroll-proportion="0.60387325">
+        <state line="128" column="7" selection-start="4303" selection-end="4303" vertical-scroll-proportion="50.083332">
           <folding>
             <element signature="e#78#98#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="50" selection-start="3766" selection-end="3766" vertical-scroll-proportion="0.8445596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="80" selection-start="1526" selection-end="1526" vertical-scroll-proportion="0.69948184">
+          <folding />
         </state>
       </provider>
     </entry>
