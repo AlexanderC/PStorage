@@ -172,6 +172,8 @@ class FileSystemDriver implements IDriver
     /**
      * @param string $pattern
      * @return array
+     *
+     * TODO: replace glob() with something quicker
      */
     public function & glob($pattern)
     {

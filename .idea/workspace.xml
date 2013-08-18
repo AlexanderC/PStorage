@@ -75,7 +75,17 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="FileSystemDriver.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="175" column="50" selection-start="3832" selection-end="3832" vertical-scroll-proportion="0.39612675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -85,7 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
@@ -101,6 +110,7 @@
         <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
         <option value="$PROJECT_DIR$/tests/Post.php" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php" />
       </list>
     </option>
   </component>
@@ -573,13 +583,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1282" height="774" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012966" sideWeight="0.64354837" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26012966" sideWeight="0.64354837" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983871" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.62258065" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -655,13 +665,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/test_hardware_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-10.996784">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="9" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-4.4956775">
@@ -746,13 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="33" selection-start="10315" selection-end="10315" vertical-scroll-proportion="0.89788735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/AModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="5" selection-start="3917" selection-end="4501" vertical-scroll-proportion="0.70950705">
@@ -782,6 +778,20 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="21" selection-start="852" selection-end="852" vertical-scroll-proportion="0.62737644">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="274" column="33" selection-start="10315" selection-end="10315" vertical-scroll-proportion="6.9454226">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Drivers/FileSystemDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="50" selection-start="3832" selection-end="3832" vertical-scroll-proportion="0.39612675">
           <folding />
         </state>
       </provider>
