@@ -162,6 +162,70 @@ trait Operations
     }
 
     /**
+     * @param mixed $value
+     * @param scalar $property
+     * @param Client $client
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findLessOfComparable($value, $property, Client $client = null)
+    {
+        $table = $this->table;
+
+        if(null !== $client) {
+            $table = clone $table;
+            $table->setSerializer($client->getSerializer());
+            $table->setStorage($client->getStorage());
+        }
+
+        return $table->findLessOfComparable($value, $property);
+    }
+
+    /**
+     * @param mixed $value
+     * @param scalar $property
+     * @param Client $client
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findGreaterOfComparable($value, $property, Client $client = null)
+    {
+        $table = $this->table;
+
+        if(null !== $client) {
+            $table = clone $table;
+            $table->setSerializer($client->getSerializer());
+            $table->setStorage($client->getStorage());
+        }
+
+        return $table->findGreaterOfComparable($value, $property);
+    }
+
+    /**
+     * @param mixed $offset
+     * @param mixed $limit
+     * @param scalar $property
+     * @param Client $client
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findRangeOfComparable($offset, $limit, $property, Client $client = null)
+    {
+        $table = $this->table;
+
+        if(null !== $client) {
+            $table = clone $table;
+            $table->setSerializer($client->getSerializer());
+            $table->setStorage($client->getStorage());
+        }
+
+        return $table->findRangeOfComparable($offset, $limit, $property);
+    }
+
+    /**
      * @param string $method
      * @param array $values
      * @return mixed

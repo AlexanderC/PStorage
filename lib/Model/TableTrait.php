@@ -13,6 +13,8 @@ use PStorage\Storage\Exceptions\MissingSearchValueException;
 use PStorage\Storage\PrimaryKey;
 use PStorage\Storage\ReversedIndex;
 use PStorage\Storage\Table;
+use PStorage\Storage\Tree\BalancedBinaryTree;
+use PStorage\Storage\Tree\Node;
 
 trait TableTrait 
 {
@@ -89,6 +91,45 @@ trait TableTrait
         foreach($rowProperties as $property) {
             /** @var ReversedIndex $reversedIndex */
             $reversedIndex = $table->getReversedIndexes()[$property];
+
+            if(AModel::DEFAULT_VALUE !== $table->getModel()->$property
+                && $table->getModel()->hasComparator($property)) {
+
+                $searchTree = $table->getSearchTrees()[$property];
+
+                $treeFile = $searchTree->getTreeFile();
+
+                if($storage->exists($treeFile)) {
+                    /** @var BalancedBinaryTree $tree */
+                    $tree = @unserialize($storage->read($treeFile));
+
+                    if(false === $tree) {
+                        throw new AtomarityViolationException("Unable to read property binary search tree file");
+                    }
+
+                    $tree->setComparator($table->getModel()->getComparators()[$property]);
+                } else {
+                    /** @var BalancedBinaryTree $tree */
+                    $tree = new BalancedBinaryTree($table->getModel()->getComparators()[$property]);
+                }
+
+                $value = $table->getModel()->$property;
+                /** @var Node $node */
+                if($node = $tree->find($value) instanceof Node) {
+                    $data = $node->getData();
+                    $data[] = $index;
+                    $node->setData($data);
+                } else {
+                    $node = $tree->insert($value);
+                    $node->setData([$index]);
+                }
+
+                if(!$storage->write($treeFile, serialize($tree))) {
+                    throw new AtomarityViolationException(
+                        "Unable to persist modified property binary search tree file"
+                    );
+                }
+            }
 
             if(!in_array($property, $manyRelationProperties)) {
                 $reversedIndexSubfolder = $reversedIndex->getReversedIndexSubfolder($rowContent[$property]);
@@ -653,6 +694,232 @@ trait TableTrait
         }
 
         return $resultSet;
+    }
+
+    /**
+     * @param mixed $value
+     * @param scalar $property
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findLessOfComparable($value, $property)
+    {
+        /** @var Table $table */
+        $table = $this;
+
+        $primaryKey = $table->getPrimaryKey();
+        $serializer = $table->getSerializer();
+        $storage = $table->getStorage();
+        $definition = $this->model->getDefinition();
+        $searchTree = $table->getSearchTrees()[$property];
+
+        if(!$table->getModel()->hasComparator($property)) {
+            throw new \BadMethodCallException("Comparator is not defined for this property");
+        }
+
+        $treeFile = $searchTree->getTreeFile();
+
+        if(!$storage->exists($treeFile)) {
+            return new Collection();
+        }
+
+        /** @var BalancedBinaryTree $tree */
+        $tree = $serializer->unserialize($storage->read($treeFile));
+        $tree->setComparator($table->getModel()->getComparators()[$property]);
+
+        $nodes = $tree->findLess($value);
+
+        if(!empty($nodes)) {
+            $foundRows = [];
+
+            /** @var Node $node */
+            foreach($nodes as $node) {
+                foreach($node->getData() as $index) {
+                    $indexFile = $primaryKey->getIndexFile($index);
+
+                    if(!$storage->exists($indexFile)) {
+                        continue;
+                    }
+
+                    $indexFileData = $serializer->unserialize($storage->read($indexFile));
+
+                    if(!isset($indexFileData[$index])) {
+                        continue;
+                    }
+
+                    $rowContentFile = $indexFileData[$index];
+
+                    // manager case when is missing row content file
+                    if(!$storage->exists($rowContentFile)) {
+                        unset($indexFileData[$index]);
+
+                        if(!$storage->write($indexFile, $serializer->serialize($indexFileData))) {
+                            throw new AtomarityViolationException("Unable to persist repaired index file");
+                        }
+
+                        continue;
+                    }
+
+                    $foundRows[] = $serializer->unserialize($storage->read($rowContentFile));
+                }
+            }
+
+            return $table->getModel()->createCollectionFromArray($foundRows);
+        }
+
+        return new Collection();
+    }
+
+    /**
+     * @param mixed $value
+     * @param scalar $property
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findGreaterOfComparable($value, $property)
+    {
+        /** @var Table $table */
+        $table = $this;
+
+        $primaryKey = $table->getPrimaryKey();
+        $serializer = $table->getSerializer();
+        $storage = $table->getStorage();
+        $definition = $this->model->getDefinition();
+        $searchTree = $table->getSearchTrees()[$property];
+
+        if(!$table->getModel()->hasComparator($property)) {
+            throw new \BadMethodCallException("Comparator is not defined for this property");
+        }
+
+        $treeFile = $searchTree->getTreeFile();
+
+        if(!$storage->exists($treeFile)) {
+            return new Collection();
+        }
+
+        /** @var BalancedBinaryTree $tree */
+        $tree = $serializer->unserialize($storage->read($treeFile));
+        $tree->setComparator($table->getModel()->getComparators()[$property]);
+
+        $nodes = $tree->findGreater($value);
+
+        if(!empty($nodes)) {
+            $foundRows = [];
+
+            /** @var Node $node */
+            foreach($nodes as $node) {
+                foreach($node->getData() as $index) {
+                    $indexFile = $primaryKey->getIndexFile($index);
+
+                    if(!$storage->exists($indexFile)) {
+                        continue;
+                    }
+
+                    $indexFileData = $serializer->unserialize($storage->read($indexFile));
+
+                    if(!isset($indexFileData[$index])) {
+                        continue;
+                    }
+
+                    $rowContentFile = $indexFileData[$index];
+
+                    // manager case when is missing row content file
+                    if(!$storage->exists($rowContentFile)) {
+                        unset($indexFileData[$index]);
+
+                        if(!$storage->write($indexFile, $serializer->serialize($indexFileData))) {
+                            throw new AtomarityViolationException("Unable to persist repaired index file");
+                        }
+
+                        continue;
+                    }
+
+                    $foundRows[] = $serializer->unserialize($storage->read($rowContentFile));
+                }
+            }
+
+            return $table->getModel()->createCollectionFromArray($foundRows);
+        }
+
+        return new Collection();
+    }
+
+    /**
+     * @param mixed $offset
+     * @param mixed $limit
+     * @param scalar $property
+     * @return Collection
+     * @throws \PStorage\Storage\Exceptions\AtomarityViolationException
+     * @throws \BadMethodCallException
+     */
+    public function findRangeOfComparable($offset, $limit, $property)
+    {
+        /** @var Table $table */
+        $table = $this;
+
+        $primaryKey = $table->getPrimaryKey();
+        $serializer = $table->getSerializer();
+        $storage = $table->getStorage();
+        $definition = $this->model->getDefinition();
+        $searchTree = $table->getSearchTrees()[$property];
+
+        if(!$table->getModel()->hasComparator($property)) {
+            throw new \BadMethodCallException("Comparator is not defined for this property");
+        }
+
+        $treeFile = $searchTree->getTreeFile();
+
+        if(!$storage->exists($treeFile)) {
+            return new Collection();
+        }
+
+        /** @var BalancedBinaryTree $tree */
+        $tree = $serializer->unserialize($storage->read($treeFile));
+        $tree->setComparator($table->getModel()->getComparators()[$property]);
+
+        $nodes = $tree->findRange($offset, $limit);
+
+        if(!empty($nodes)) {
+            $foundRows = [];
+
+            /** @var Node $node */
+            foreach($nodes as $node) {
+                foreach($node->getData() as $index) {
+                    $indexFile = $primaryKey->getIndexFile($index);
+
+                    if(!$storage->exists($indexFile)) {
+                        continue;
+                    }
+
+                    $indexFileData = $serializer->unserialize($storage->read($indexFile));
+
+                    if(!isset($indexFileData[$index])) {
+                        continue;
+                    }
+
+                    $rowContentFile = $indexFileData[$index];
+
+                    // manager case when is missing row content file
+                    if(!$storage->exists($rowContentFile)) {
+                        unset($indexFileData[$index]);
+
+                        if(!$storage->write($indexFile, $serializer->serialize($indexFileData))) {
+                            throw new AtomarityViolationException("Unable to persist repaired index file");
+                        }
+
+                        continue;
+                    }
+
+                    $foundRows[] = $serializer->unserialize($storage->read($rowContentFile));
+                }
+            }
+
+            return $table->getModel()->createCollectionFromArray($foundRows);
+        }
+
+        return new Collection();
     }
 
     /**

@@ -10,6 +10,7 @@ class SearchTree extends ATableSubItem
 {
     const MAIN_FOLDER = "bstr";
     const SEARCH_TREE_FOLDER = "%s_bstrnds";
+    const SEARCH_TREE_FILE = "bstrdf";
 
     /**
      * @var string
@@ -46,5 +47,13 @@ class SearchTree extends ATableSubItem
     public function getPropertyFolder()
     {
         return sprintf("%s/%s", $this->getMainFolder(), sprintf(self::SEARCH_TREE_FOLDER, $this->property));
+    }
+
+    /**
+     * @return string
+     */
+    public function getTreeFile()
+    {
+        return sprintf("%s/%s", $this->getPropertyFolder(), self::SEARCH_TREE_FILE);
     }
 }

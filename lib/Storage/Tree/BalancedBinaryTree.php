@@ -408,7 +408,7 @@ class BalancedBinaryTree
                 /** @var Node $current */
                 $rightNode = $rawValues[$rightKey];
 
-                $current->setright($rightNode);
+                $current->setRight($rightNode);
                 
                 $this->persistByRawMiddle($right, $current);
             }
@@ -458,7 +458,7 @@ class BalancedBinaryTree
     public function __sleep()
     {
         return [
-            'root'
+            'root', 'leftMost', 'rightMost'
         ];
     }
 

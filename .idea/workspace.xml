@@ -10,7 +10,7 @@
     <file path="/UniversalGS.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376225730326" ignored="false" />
     <file path="/Definition.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376209069320" ignored="false" />
     <file path="/DefinitionHelper.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376163798377" ignored="false" />
-    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376844549742" ignored="false" />
+    <file path="/Post.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376852274677" ignored="false" />
     <file path="/Validator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376338111802" ignored="false" />
     <file path="/PropertyRequiredException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165449202" ignored="false" />
     <file path="/UniqueConstrainFailException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376165515076" ignored="false" />
@@ -32,7 +32,7 @@
     <file path="/Row.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376222605308" ignored="false" />
     <file path="/Inflector.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376176965950" ignored="false" />
     <file path="/PrimaryKeyIncrementalFileViolation.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376179110298" ignored="false" />
-    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376348938918" ignored="false" />
+    <file path="/TableTrait.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376852145765" ignored="false" />
     <file path="/DefaultClient.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376205161894" ignored="false" />
     <file path="/BehaviorApplyable.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376213015872" ignored="false" />
     <file path="/ABehavior.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376212750122" ignored="false" />
@@ -40,7 +40,7 @@
     <file path="/Collection.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376418469484" ignored="false" />
     <file path="/CollectionInterface.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376214207603" ignored="false" />
     <file path="/MissingPrimaryKeyException.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376218176641" ignored="false" />
-    <file path="/Operations.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376336913720" ignored="false" />
+    <file path="/Operations.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376852069983" ignored="false" />
     <file path="/MissingSearchValue.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376334260807" ignored="false" />
     <file path="/performance.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376349202784" ignored="false" />
     <file path="/Timer.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376339957777" ignored="false" />
@@ -50,9 +50,9 @@
     <file path="/AComparator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376742665831" ignored="false" />
     <file path="/PredefinedComparators.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376734490121" ignored="false" />
     <file path="/NumberComparator.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376742736194" ignored="false" />
-    <file path="/SearchTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376735263419" ignored="false" />
+    <file path="/SearchTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376848991831" ignored="false" />
     <file path="/Node.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376813967189" ignored="false" />
-    <file path="/BalancedBinaryTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376844596581" ignored="false" />
+    <file path="/BalancedBinaryTree.php" changelist="51397fcb-3c4f-4ff1-b2b2-8e242a66a43a" time="1376851829858" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,39 +88,19 @@
       <file leaf-file-name="Post.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-25.0">
-              <folding />
+            <state line="152" column="41" selection-start="4348" selection-end="4348" vertical-scroll-proportion="-7.5">
+              <folding>
+                <element signature="e#78#98#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TableTrait.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TableTrait.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="730" column="33" selection-start="25962" selection-end="25962" vertical-scroll-proportion="0.43804035">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Node.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="50" selection-start="970" selection-end="970" vertical-scroll-proportion="-13.291667">
-              <folding>
-                <element signature="e#6#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BalancedBinaryTree.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="24" selection-start="619" selection-end="619" vertical-scroll-proportion="1.6916426">
-              <folding>
-                <element signature="e#6#35#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -135,22 +115,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
-        <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
         <option value="$PROJECT_DIR$/tests/performance.php" />
         <option value="$PROJECT_DIR$/lib/Collection.php" />
         <option value="$PROJECT_DIR$/lib/Helpers/Paginator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/PredefinedComparators.php" />
         <option value="$PROJECT_DIR$/docs/main_scheme.txt" />
-        <option value="$PROJECT_DIR$/lib/Storage/SearchTree.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Table.php" />
         <option value="$PROJECT_DIR$/lib/AModel.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/AComparator.php" />
         <option value="$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Tree/Node.php" />
-        <option value="$PROJECT_DIR$/tests/Post.php" />
+        <option value="$PROJECT_DIR$/lib/Storage/SearchTree.php" />
         <option value="$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php" />
+        <option value="$PROJECT_DIR$/lib/Model/Operations.php" />
+        <option value="$PROJECT_DIR$/lib/Model/TableTrait.php" />
+        <option value="$PROJECT_DIR$/tests/Post.php" />
       </list>
     </option>
   </component>
@@ -705,102 +685,10 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/Storage/ReversedIndex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="4" selection-start="1373" selection-end="1574" vertical-scroll-proportion="0.15306123">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Behaviors/Helpers/BehaviorApplyable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="103" selection-start="1459" selection-end="1550" vertical-scroll-proportion="0.15561225">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/TableDescriptorsConstants.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="9" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.4715447">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="108" selection-start="875" selection-end="875" vertical-scroll-proportion="-25.625">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="89" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-4.242347">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-            <element signature="e#58#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="9" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-0.038265307">
-          <folding>
-            <element signature="e#66#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/AComparator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="170" selection-end="170" vertical-scroll-proportion="0.4878049">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/NumberComparator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="417" selection-end="417" vertical-scroll-proportion="0.83739835">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/main_scheme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="70" selection-start="3691" selection-end="3691" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="50" selection-start="970" selection-end="970" vertical-scroll-proportion="-13.291667">
-          <folding>
-            <element signature="e#6#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,19 +708,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="3181" selection-end="3181" vertical-scroll-proportion="-25.0">
-          <folding />
+        <state line="82" column="9" selection-start="1937" selection-end="1937" vertical-scroll-proportion="-4.4956775">
+          <folding>
+            <element signature="e#66#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Comparators/Helpers/ComparatorApplyable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="9" selection-start="1201" selection-end="1201" vertical-scroll-proportion="2.2222223">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/Node.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="50" selection-start="970" selection-end="970" vertical-scroll-proportion="0.5616197">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="21" selection-start="951" selection-end="951" vertical-scroll-proportion="0.6830986">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/AModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="89" selection-start="2149" selection-end="2149" vertical-scroll-proportion="-2.6179578">
+          <folding>
+            <element signature="e#6#35#0" expanded="true" />
+            <element signature="e#58#96#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/Tree/BalancedBinaryTree.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="24" selection-start="619" selection-end="619" vertical-scroll-proportion="1.6916426">
+        <state line="246" column="5" selection-start="6456" selection-end="6456" vertical-scroll-proportion="0.52449566">
           <folding>
             <element signature="e#6#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Post.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="41" selection-start="4348" selection-end="4348" vertical-scroll-proportion="-7.5">
+          <folding>
+            <element signature="e#78#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="5" selection-start="4582" selection-end="4582" vertical-scroll-proportion="0.6541787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="730" column="33" selection-start="25962" selection-end="25962" vertical-scroll-proportion="0.43804035">
+          <folding />
         </state>
       </provider>
     </entry>
