@@ -39,7 +39,7 @@ class BalancedBinaryTree
     }
 
     /**
-     * @return null|\PStorage\Storage\Tree\Node
+     * @return null|Node
      */
     public function getLeftMost()
     {
@@ -47,7 +47,7 @@ class BalancedBinaryTree
     }
 
     /**
-     * @return null|\PStorage\Storage\Tree\Node
+     * @return null|Node
      */
     public function getRightMost()
     {
@@ -222,6 +222,7 @@ class BalancedBinaryTree
      * @param mixed $lower
      * @param mixed $higher
      * @param Node $node
+     * @return array
      */
     protected function & findRangeRaw($lower, $higher, Node $node)
     {
