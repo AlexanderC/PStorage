@@ -96,7 +96,7 @@ class Post extends AModel
      * - public function findGreaterOfComparable($value, $property, Client $client = null)
      *
      * Find rows with field values less than given $property
-     * - public function findLessOfComparable($value, $property, Client $client = null)s
+     * - public function findLessOfComparable($value, $property, Client $client = null)
      *
      * ($property aka field)
      *
@@ -105,7 +105,7 @@ class Post extends AModel
     protected function comparators()
     {
         return [
-            'old_id' => self::PROPERTY_NUMBER_COMPARATOR
+            'old_id' => self::PROPERTY_NUMBER_COMPARATOR /* "number" */
         ];
     }
 }
@@ -126,7 +126,7 @@ class Post extends AModel
  * namespace and defined by passing instance of that as the second argument
  * to the Client class
  */
-DefaultClient::getInstance(new Client(new FileSystemDriver(__DIR__ . "/db")));
+DefaultClient::getInstance(new Client(new FileSystemDriver(__DIR__ . "/db")/* , Serializer... */));
 
 // -------------------------------------------------------- //
 

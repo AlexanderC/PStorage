@@ -88,19 +88,10 @@
       <file leaf-file-name="Post.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="76" selection-start="7269" selection-end="7269" vertical-scroll-proportion="0.92077464">
+            <state line="68" column="27" selection-start="2432" selection-end="2432" vertical-scroll-proportion="1.7429577">
               <folding>
                 <element signature="e#78#98#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Operations.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="41" selection-start="3532" selection-end="3553" vertical-scroll-proportion="50.708332">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -737,13 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="274" column="33" selection-start="10315" selection-end="10315" vertical-scroll-proportion="-23.855907">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Storage/SearchTree.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="36" selection-start="215" selection-end="221" vertical-scroll-proportion="0.518732">
@@ -794,14 +778,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/Model/Operations.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="41" selection-start="3532" selection-end="3553" vertical-scroll-proportion="50.708332">
+        <state line="149" column="41" selection-start="3532" selection-end="3553" vertical-scroll-proportion="1.0264084">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Model/TableTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="274" column="33" selection-start="10315" selection-end="10315" vertical-scroll-proportion="0.89788735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="76" selection-start="7269" selection-end="7269" vertical-scroll-proportion="0.92077464">
+        <state line="68" column="27" selection-start="2432" selection-end="2432" vertical-scroll-proportion="1.7429577">
           <folding>
             <element signature="e#78#98#0" expanded="true" />
           </folding>
